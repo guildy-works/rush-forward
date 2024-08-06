@@ -1,0 +1,47 @@
+'use client'
+
+import { css } from "@emotion/css";
+import Link from "next/link";
+import styles from "./LinkButton.module.scss";
+import clsx from "clsx";
+
+export const LinkButton = (
+    {
+        href,
+        title,
+        subTitle,
+        className,
+        target
+    }: {
+        href: string,
+        title?: string
+        subTitle?: string,
+        className?: string,
+        target?: string
+    }
+) => {
+
+    return (
+        <Link href={href} target={target}>
+            <div className={clsx(styles.viewMore, className)}>
+                {
+                    title && <h2
+                        style={{
+                            fontSize: "0.7rem",
+                            userSelect: "none"
+                        }}
+                    >
+                        {title}
+                    </h2>
+                }
+                <h2
+                    style={{
+                        fontFamily: "'Jost', 'Noto Sans JP', sans-serif",
+                        userSelect: "none"
+                    }}>
+                    {subTitle}
+                </h2>
+            </div>
+        </Link>
+    );
+};
