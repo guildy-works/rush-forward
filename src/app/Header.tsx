@@ -12,10 +12,10 @@ export const Header = () => {
 
     const menuItems = [
         { href: "/", label: "TOP" },
-        { href: "/", label: "私たちについて" },
+        { href: "/about", label: "私たちについて" },
         { href: "/services", label: "Works" },
         { href: "/news", label: "お知らせ" },
-        { href: "/", label: "会社概要" },
+        { href: "/company", label: "会社概要" },
         { href: "/contacts", label: "お問い合わせ" },
     ];
 
