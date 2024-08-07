@@ -13,7 +13,7 @@ import CitySvg from "@/assets/city.svg";
 
 export const AmazonBookSection = () => {
     return (
-        <section className="bg-color8 w-full mt-28 sm:mt-36 md:mt-48 lg:mt-56 py-20 sm:py-36 px-4 relative">
+        <section className="bg-color8 w-full mt-28 sm:mt-36 md:mt-48 lg:mt-56 py-20 sm:py-36 relative px-6 sm:px-12 md:px-24">
             <FadeAndSlideScrollTriggerAnimation
                 transform={{ translate: { y: "100%" } }}
                 className="!absolute right-0 -z-10"
@@ -29,16 +29,15 @@ export const AmazonBookSection = () => {
                     </Book>
                 </FadeAndSlideScrollTriggerAnimation>
 
-                <div className="mt-6 md:mt-12 ml-auto w-full md:w-3/5 md:items-start flex flex-col items-start">
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <h2 className="text-title3">当社代表 重野和稔の著書</h2>
-                    </SkewScrollTriggerAnimation>
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <h2 className="text-title3 mt-3">「飲食店 成功する店 失敗する店」</h2>
-                    </SkewScrollTriggerAnimation>
+                <div className="mt-12 ml-auto w-full md:w-3/5 md:items-start flex flex-col items-center">
+                    <div className="flex flex-col gap-2 md:gap-3 items-start">
+                        <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                            <h2 className="text-title3">当社代表 重野和稔の著書</h2>
+                        </SkewScrollTriggerAnimation>
+                        <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                            <h2 className="text-title3 mt-3">「飲食店 成功する店 失敗する店」</h2>
+                        </SkewScrollTriggerAnimation>
 
-
-                    <article className="flex flex-col gap-2 md:gap-3 items-start">
                         <SkewScrollTriggerAnimation innerClassName="!bg-color8" className="mt-4 sm:mt-8 md:mt-12">
                             <h3>独立して以来、国内外200店舗以上の飲食店プロデュース、</h3>
                         </SkewScrollTriggerAnimation>
@@ -57,7 +56,7 @@ export const AmazonBookSection = () => {
                         <SkewScrollTriggerAnimation innerClassName="!bg-color8">
                             <h3> 飲食店を経営している人には必読の1冊です。</h3>
                         </SkewScrollTriggerAnimation>
-                    </article>
+                    </div>
 
                     <div className="mt-12 md:mt-auto m ml-auto w-full sm:w-auto">
                         <LinkButton

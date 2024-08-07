@@ -20,6 +20,8 @@ import Gastro7 from "@/assets/images/gastro/gstro7.webp"
 import Gastro8 from "@/assets/images/gastro/gstro8.jpg"
 import Gastro9 from "@/assets/images/gastro/gstro9.jpg"
 import Gastro10 from "@/assets/images/gastro/gstro10.jpg"
+import Gastro11 from "@/assets/images/gastro/gstro11.webp"
+import Gastro12 from "@/assets/images/gastro/gstro12.webp"
 import { TransitionImage2 } from "@/components/TransitionImage2"
 
 
@@ -29,7 +31,7 @@ export const ServicesSection = () => {
     return (
         <>
             <SectionType1>
-                <div className=" justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full md:w-2/5">
+                <div className=" justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full md:w-3/5">
                     <Section1Title title="Service" subTitle="事業" />
 
                     <SkewScrollTriggerAnimation className="space-y-2 text-gray-700 mt-3 sm:mt-5 md:mt-7 text-size2">
@@ -45,10 +47,11 @@ export const ServicesSection = () => {
                         <p>しっかりサポートさせていただきます。</p>
                     </SkewScrollTriggerAnimation>
 
-                    <div className="mt-4 p-3">
-                        <LinkButton href="/about" title="VIEW More" subTitle="もっとみる">
+                    <LinkButton href="/about" title="VIEW More" subTitle="もっとみる" className="mt-5" />
 
-                        </LinkButton>
+                    {/* 写真エリア */}
+                    <div className="flex-1 w-full relative gap-24 flex flex-wrap justify-center items-center">
+
                     </div>
                 </div>
                 <div className="mt-12 sm:mt-16 md:mt-24 ml-auto w-full md:w-2/5 flex flex-wrap">
@@ -68,7 +71,7 @@ export const ServicesSection = () => {
 const Service1 = () => {
 
     return (
-        <article className="flex flex-col items-start w-full p-3 sm:p-8 gap-3 sm:gap-5 md:gap-8">
+        <article className="flex flex-col items-start w-full gap-3 sm:gap-5 md:gap-8">
             <TransitionImage src={MapImage} alt="img" className="rounded-xl" />
 
             <SkewScrollTriggerAnimation>
@@ -106,9 +109,9 @@ const Service1 = () => {
 
 const Service2 = () => {
     return (
-        <SectionType1 className="md:mt-48 bg-color8" disableLine>
+        <SectionType1 className="mt-96 bg-color8" disableLine>
             {/* Top */}
-            <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full -mt-96">
+            <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full -mt-96 flex-wrap">
                 <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center">
                     <SkewScrollTriggerAnimation>
                         <h3 className="text-title1 text-font1">ガストロノミーツーリズム</h3>
@@ -126,7 +129,7 @@ const Service2 = () => {
                     </SkewScrollTriggerAnimation>
 
                 </div>
-                <div>
+                <div className="mt-6">
                     <TransitionImage className="max-w-sm w-full" src={Gastro} alt="ガストロノミーツーリズム" />
                 </div>
             </div>
@@ -174,9 +177,10 @@ const Service2 = () => {
                     </SkewScrollTriggerAnimation>
 
                     <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-title4 text-color4">
-                            地元の食材や資源を活用し、<br />
-                            他の宿泊施設では体験できないような唯一無二の宿泊施設を創ります。
+                        <p className="text-title4 text-color4 leading-7">
+                            地元の食材や資源を活用し<br />
+                            他の宿泊施設では体験できないような<br />
+                            唯一無二の宿泊施設を創ります
                         </p>
                     </SkewScrollTriggerAnimation>
 

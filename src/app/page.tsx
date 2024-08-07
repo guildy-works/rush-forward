@@ -23,9 +23,7 @@ export default function Home() {
 
             <AmazonBookSection />
 
-            <div className="mt-4 sm:mt-12 lg:mt-24 w-full flex justify-center">
-                <NewsSection />
-            </div>
+            <NewsSection />
 
             <ServicesSection />
 
