@@ -50,7 +50,7 @@ export const NewsSection = () => {
     return (
         <SectionType1 className="bg-color8">
             <div className="justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full">
-                <Section1Title title="News" subTitle="　　" className="!bg-color8" />
+                <Section1Title title="News" subTitle="　　" innerClassName="!bg-color8" />
 
                 <div className="mx-auto w-full">
                     <FadeAndSlideScrollTriggerAnimation>
@@ -87,17 +87,17 @@ const NewsItem = (props: {
     const date = new Date(news.date);
 
     return (
-        <div className=" size-full ">
+        <div className="size-full">
             <div className="size-full flex p-4 pl-0 shadow-lg bg-white rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl transition:shadow duration-300 ease-in-out">
                 <div className="p-4 w-24 bg-color6 flex flex-col items-center justify-center gap-2 rounded-r-xl">
-                    <div>{date.getFullYear()}</div>
-                    <div className="text-title2">{date.getMonth() + 1}.{date.getDate()}</div>
+                    <div className="text-size-p text-color2">{date.getFullYear()}</div>
+                    <div className="text-title2 text-color3">{date.getMonth() + 1}.{date.getDate()}</div>
                 </div>
 
                 <div className="md:w-2/3 px-4">
                     <h4 className="text-xl font-bold mt-2 mb-2">{news.title}</h4>
                     <Link href="" className="text-color3 hover:underline inline-block">
-                        詳細を見る
+                        もっと見る
                     </Link>
                 </div>
             </div>

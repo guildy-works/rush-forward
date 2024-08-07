@@ -3,7 +3,8 @@ import { LinkButton } from "@/components/LinkButton"
 import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation"
 import { TransitionImage } from "@/components/TransitionImage"
 
-import Image1 from "@/assets/img.png"
+import Image1_GarariSendagaya from "@/assets/img1.jpg"
+import Image9_AoyamaGarariTsukuba from "@/assets/img9.jpg"
 
 import MapImage from "@/assets/map.svg"
 import { SectionType1 } from "@/components/SectionType1"
@@ -23,8 +24,12 @@ import Gastro10 from "@/assets/images/gastro/gstro10.jpg"
 import Gastro11 from "@/assets/images/gastro/gstro11.webp"
 import Gastro12 from "@/assets/images/gastro/gstro12.webp"
 import { TransitionImage2 } from "@/components/TransitionImage2"
+import { StaticImageData } from "next/image"
 
+import Traveller from "@/assets/images/traveller.svg"
+import Traveller2 from "@/assets/images/traveller2.svg"
 
+import Image from "next/image"
 
 export const ServicesSection = () => {
 
@@ -50,8 +55,30 @@ export const ServicesSection = () => {
                     <LinkButton href="/about" title="VIEW More" subTitle="もっとみる" className="mt-5" />
 
                     {/* 写真エリア */}
-                    <div className="flex-1 w-full relative gap-24 flex flex-wrap justify-center items-center">
-
+                    <div className="flex-1 w-full relative gap-24 flex flex-wrap justify-center items-center pl-0 sm:pr-8">
+                        <div className="w-full flex flex-wrap gap-4 sm:gap-6 lg:gap-12">
+                            <FadeAndSlideScrollTriggerAnimation className="max-w-36 lg:max-w-48 w-full mt-12" >
+                                <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro2} alt="img" />
+                            </FadeAndSlideScrollTriggerAnimation>
+                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-36 w-full  md:ml-0 md:mt-32"  >
+                                <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro12} alt="img" />
+                            </FadeAndSlideScrollTriggerAnimation>
+                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 w-full mt-3"  >
+                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro7} alt="img" />
+                            </FadeAndSlideScrollTriggerAnimation>
+                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-16 w-full"  >
+                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro11} alt="img" />
+                            </FadeAndSlideScrollTriggerAnimation>
+                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-24 w-full"  >
+                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro8} alt="img" />
+                            </FadeAndSlideScrollTriggerAnimation>
+                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-12 w-full"  >
+                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro10} alt="img" />
+                            </FadeAndSlideScrollTriggerAnimation>
+                            <FadeAndSlideScrollTriggerAnimation className="max-w-44 lg:max-w-56 mt-12 w-full"  >
+                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro1} alt="img" />
+                            </FadeAndSlideScrollTriggerAnimation>
+                        </div>
                     </div>
                 </div>
                 <div className="mt-12 sm:mt-16 md:mt-24 ml-auto w-full md:w-2/5 flex flex-wrap">
@@ -63,7 +90,7 @@ export const ServicesSection = () => {
 
             <Service2 />
 
-
+            <Service3 />
         </>
     )
 }
@@ -109,19 +136,34 @@ const Service1 = () => {
 
 const Service2 = () => {
     return (
-        <SectionType1 className="mt-96 bg-color8" disableLine>
+        <SectionType1 className="mt-64 bg-color8 sm:mt-36 md:mt-48 lg:mt-56 relative" disableLine>
+            {/* 旅人イラスト */}
+          <FadeAndSlideScrollTriggerAnimation
+                transform={{ translate: { y: "100%" } }}
+                className="!absolute left-0 -z-10 w-48 md:w-60"
+                style={{ bottom: "calc(100% + 76px)" }}>
+                <Image src={Traveller} alt="旅人" />
+            </FadeAndSlideScrollTriggerAnimation>
+            <FadeAndSlideScrollTriggerAnimation
+                transform={{ translate: { y: "100%" } }}
+                className="!absolute right-0 -z-10 w-48 md:w-60"
+                style={{ bottom: "calc(100% + 76px)" }}>
+                <Image src={Traveller2} alt="旅人2" />
+            </FadeAndSlideScrollTriggerAnimation>
+
+
             {/* Top */}
-            <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full -mt-96 flex-wrap">
-                <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center">
-                    <SkewScrollTriggerAnimation>
+            <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full flex-col md:-mt-64 md:flex-row items-center" >
+                <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center mt-auto pb-12">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
                         <h3 className="text-title1 text-font1">ガストロノミーツーリズム</h3>
                     </SkewScrollTriggerAnimation>
 
-                    <SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
                         <h4 className="text-title4 text-font2"> 地方から世界へ！↔世界から地方へ！</h4>
                     </SkewScrollTriggerAnimation>
 
-                    <SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
                         <p className="text-size-p-wide">
                             観光立国として日本を持続的に活性化するため、<br />
                             世界中からフーディーズを集めます！
@@ -134,22 +176,8 @@ const Service2 = () => {
                 </div>
             </div>
 
-            {/* Left */}
-            <div className="flex flex-col gap-20 p-3 sm:p-5 md:p-8 items-center justify-between">
-                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto" >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro1} alt="img" />
-                </FadeAndSlideScrollTriggerAnimation>
-                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full "  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro2} alt="img" />
-                </FadeAndSlideScrollTriggerAnimation>
-                <FadeAndSlideScrollTriggerAnimation className="max-w-48 w-full ml-auto"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro3} alt="img" />
-                </FadeAndSlideScrollTriggerAnimation>
-
-            </div>
-
             {/* Center */}
-            <div className="flex flex-col flex-grow justify-center items-center gap-3 sm:gap-5 md:gap-16 p-3 sm:p-5 md:p-8">
+            <div className="flex flex-col flex-grow justify-center items-center gap-3 sm:gap-5 md:gap-16 mt-12 md:24">
                 <div className="flex flex-col items-start gap-2 sm:gap-3 md:gap-5">
                     <SkewScrollTriggerAnimation innerClassName="!bg-color8">
                         <p className="text-size-p-wide">
@@ -176,63 +204,179 @@ const Service2 = () => {
                         </p>
                     </SkewScrollTriggerAnimation>
 
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-title4 text-color4 leading-7">
-                            地元の食材や資源を活用し<br />
-                            他の宿泊施設では体験できないような<br />
-                            唯一無二の宿泊施設を創ります
-                        </p>
-                    </SkewScrollTriggerAnimation>
-
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-size-p-wide">
-                            当社が得意とするエッジの効いたコンセプトメイクにより、<br />
-                            わざわざそこまで足を運びたくなるような、<br />
-                            他では味わえない宿泊施設をプロデュース。<br />
-                        </p>
-                    </SkewScrollTriggerAnimation>
-
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-size-p-wide">
-                            また今まで培った手法を駆使したモーションで、<br />
-                            他県はもちろん、世界中からも集客を図ります。<br />
-                            既存施設のリニューアルや運営のお手伝いも行いますので、<br />
-                            経営の立て直し、後継者問題などお気軽にご相談下さい。
-                        </p>
-                    </SkewScrollTriggerAnimation>
+                    <div className="mt-4 p-3 ml-auto">
+                        <LinkButton href="/about" title="VIEW More" subTitle="もっとみる" />
+                    </div>
                 </div>
             </div>
 
             {/* Right */}
-            <div className="w-1/2 md:w-full lg:w-auto flex flex-col flex-wrap md:flex-col gap-8 sm:gap-20 p-3 sm:p-5 md:p-8 items-center justify-between">
-                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto" >
+            <div className="w-full flex flex-wrap gap-8 sm:gap-20 p-3 sm:p-5 md:p-8 justify-between">
+                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full mt-12" >
                     <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro4} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
-                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full  mr-auto"  >
+                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto md:ml-0 md:mt-32"  >
                     <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro5} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
-                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full  mx-auto"  >
+                <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full"  >
                     <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro6} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
 
             </div>
 
-            {/* Bottom */}
-            <div className="flex flex-wrap gap-3 md:gap-20 p-3 sm:p-5 md:p-8 items-center w-1/2 md:w-full justify-between">
-                <FadeAndSlideScrollTriggerAnimation className="max-w-80 w-full"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={55} src={Gastro7} alt="img" />
-                </FadeAndSlideScrollTriggerAnimation>
-                <FadeAndSlideScrollTriggerAnimation className="max-w-80 w-full"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={20} src={Gastro8} alt="img" />
-                </FadeAndSlideScrollTriggerAnimation>
-                <FadeAndSlideScrollTriggerAnimation className="max-w-72 w-full"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={70} src={Gastro9} alt="img" />
-                </FadeAndSlideScrollTriggerAnimation>
-                <FadeAndSlideScrollTriggerAnimation className="max-w-72 w-full "  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={40} src={Gastro10} alt="img" />
-                </FadeAndSlideScrollTriggerAnimation>
-            </div>
-
         </SectionType1>
     )
 }
+
+const Service3 = () => {
+    return (
+        <SectionType1 className="text-left">
+            <div className="w-full justify-start flex flex-col items-start gap-8 sm:gap-24 md:gap-32 ">
+                <Section1Title title="Restaurant" subTitle="直営店" />
+
+                <RestaurantArticle
+                    children1={
+                        <>
+                            <div className="flex flex-col gap-4 md:gap-8">
+                                <SkewScrollTriggerAnimation className="">
+                                    <h3 className="text-title3">奄美黒糖焼酎 x 味噌 x 古民家</h3>
+                                </SkewScrollTriggerAnimation>
+                                <SkewScrollTriggerAnimation className="">
+                                    <h2 className="text-title1">がらり千駄ヶ谷</h2>
+                                </SkewScrollTriggerAnimation>
+                            </div>
+
+                            <div className="flex flex-col items-start">
+                                <SkewScrollTriggerAnimation className="">
+                                    <p className="text-size-p-wide">
+                                        奄美群島でしか作ることのできない黒糖焼酎。<br />
+                                        全ての蔵の全銘柄を揃えている日本で唯一、いや世界で唯一のお店です。
+
+                                    </p>
+                                </SkewScrollTriggerAnimation>
+                                <SkewScrollTriggerAnimation className="mt-3">
+                                    <p className="text-size-p">
+                                        また日本の伝統的な発酵調味料である味噌を全国から取り寄せ、<br />
+                                        伝統的な和食と融合して更に進化させたお料理を提供しております。
+                                    </p>
+                                </SkewScrollTriggerAnimation>
+                                <SkewScrollTriggerAnimation className="mt-3">
+                                    <p className="text-size-p">
+                                        築60年以上の古民家を改装した懐かしくてモダンな空間で、<br />
+                                        ゆったりとした時間をお過ごしいただけます。
+                                    </p>
+                                </SkewScrollTriggerAnimation>
+                            </div>
+                        </>
+                    }
+                    children2={
+                        <>
+                            <FadeAndSlideScrollTriggerAnimation>
+                                <h2 className="text-title3  [writing-mode:vertical-rl]">
+                                    希少な奄美黒糖焼酎で<br />
+                                    新たな感動を。
+                                </h2>
+                            </FadeAndSlideScrollTriggerAnimation>
+                        </>
+                    }
+                    image={Image1_GarariSendagaya}
+                />
+
+                <RestaurantArticle
+                    children1={
+                        <>
+                            <div className="flex flex-col gap-4 md:gap-8">
+                                <SkewScrollTriggerAnimation className="">
+                                    <h3 className="text-title3">蕎麦 x 居酒屋</h3>
+                                </SkewScrollTriggerAnimation>
+                                <SkewScrollTriggerAnimation className="">
+                                    <h2 className="text-title1">青山がらりつくば</h2>
+                                </SkewScrollTriggerAnimation>
+                            </div>
+
+                            <div className="flex flex-col items-start">
+                                <SkewScrollTriggerAnimation className="">
+                                    <p className="text-size-p-wide">
+                                        楽しむ地産地消のお店 <br />
+
+                                    </p>
+                                </SkewScrollTriggerAnimation>
+                                <SkewScrollTriggerAnimation className="mt-3">
+                                    <p className="text-size-p">
+                                        青山がらりつくば店はつくば駅隣接のtonarie Q't 3階にある老舗蕎麦居酒屋です。 <br />
+
+                                    </p>
+                                </SkewScrollTriggerAnimation>
+                                <SkewScrollTriggerAnimation className="mt-3">
+                                    <p className="text-size-p">
+                                        全国各地から集めた日本酒と焼酎の品揃えが豊富で、 <br />
+                                        特に茨城県産の日本酒を多く取り扱っています​​​​。
+                                    </p>
+                                </SkewScrollTriggerAnimation>
+                                <SkewScrollTriggerAnimation className="mt-3">
+                                    <p className="text-size-p">
+                                        また、地元茨城県産の旬の食材を、 <br />
+                                        素材の美味しさを活かすように職人が丁寧に仕込んだ料理を提供しております。 <br />
+                                        地元の方だけでなく、 <br />
+                                        外国の方や他県の方にも人気があります。
+                                    </p>
+                                </SkewScrollTriggerAnimation>
+                            </div>
+                        </>
+                    }
+                    children2={
+                        <>
+                            <FadeAndSlideScrollTriggerAnimation>
+                                <h2 className="text-title3  [writing-mode:vertical-rl]">
+                                    茨城の食材を使った<br />
+                                    地産地消の蕎麦居酒屋。
+                                </h2>
+                            </FadeAndSlideScrollTriggerAnimation>
+                        </>
+                    }
+                    image={Image9_AoyamaGarariTsukuba}
+                />
+            </div>
+        </SectionType1>
+    )
+}
+
+const RestaurantArticle = ({ image, children1, children2 }: {
+    children1?: React.ReactNode,
+    children2?: React.ReactNode,
+    image: StaticImageData
+}) => (
+    <div className="w-full flex flex-wrap justify-center">
+
+        <div className="md:w-3/5 flex justify-center items-center">
+            {/* 浮かせる余白 */}
+            <div className="flex flex-col items-start gap-4 md:gap-8 ">
+                {children1}
+            </div>
+        </div>
+
+        <div className="md:w-2/5 mt-8">
+            <ShopImageArticle image={image} >
+                {children2}
+            </ShopImageArticle>
+        </div>
+    </div>)
+
+const ShopImageArticle = ({ image, children }: {
+    children?: React.ReactNode,
+    image: StaticImageData
+}) => (
+    <article
+        className="relative pb-12 w-full">
+        {/* 装飾 */}
+        <div className="bg-color7 absolute bottom-0 left-0 w-3/5 h-2/3"
+            style={{ clipPath: "polygon(0 35%, 100% 0, 100% 100%, 0% 100%)" }}></div>
+
+        <div className="flex flex-wrap w-full">
+            <div className="flex flex-row-reverse p-12 md:p-12">
+                {children}
+            </div>
+            <TransitionImage className="w-full h-full max-w-md" parallaxSlideLength={80} src={image} alt="img" />
+        </div>
+    </article>
+)

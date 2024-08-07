@@ -14,6 +14,7 @@ import AboutSection from "@/pages-components/top/AboutSection";
 import '@splidejs/splide/css'; 
 import { AmazonBookSection } from "@/pages-components/top/AmazonBookSection";
 import { ServicesSection } from "@/pages-components/top/ServicesSection";
+import { ContactSection } from "@/pages-components/top/ContactSection";
 
 export default function Home() {
     return (
@@ -26,6 +27,8 @@ export default function Home() {
             <NewsSection />
 
             <ServicesSection />
+
+            <ContactSection />
 
             <div className="w-full">
 
