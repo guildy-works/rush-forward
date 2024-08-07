@@ -3,13 +3,13 @@ import { SectionType1 } from "@/components/SectionType1"
 export const ContactSection = () => {
 
     return (
-        <SectionType1 disableLine className="bg-color8" innerClassName="items-center">
+        <SectionType1 disableLine className="bg-color8 mt-8 md:mt-48" innerClassName="items-center">
 
-                <div className="bg-white p-8 md:p-16 md:px-48 w-full ">
+                <div className="bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32">
                     <h2 className="text-title2 font-bold text-center mb-2">CONTACT</h2>
                     <p className="text-center text-gray-600 mb-8">お問い合わせ・ご相談はお気軽にどうぞ。</p>
 
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4 md:gap-8">
                         <div className="mb-6 md:mb-0">
                             <p className="text-title3 font-bold mb-2">tel.0120-622835</p>
                             <p className="text-size2 text-gray-600">営業時間／10:00〜18:00　定休日／土日祝日</p>

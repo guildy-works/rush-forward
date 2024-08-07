@@ -5,6 +5,7 @@ import { TransitionImage } from "@/components/TransitionImage"
 
 import Image1_GarariSendagaya from "@/assets/img1.jpg"
 import Image9_AoyamaGarariTsukuba from "@/assets/img9.jpg"
+import Image_Flow from "@/assets/flow.jpg"
 
 import MapImage from "@/assets/map.svg"
 import { SectionType1 } from "@/components/SectionType1"
@@ -30,6 +31,7 @@ import Traveller from "@/assets/images/traveller.svg"
 import Traveller2 from "@/assets/images/traveller2.svg"
 
 import Image from "next/image"
+import { HighlightMarker } from "@/components/HighlightMarker"
 
 export const ServicesSection = () => {
 
@@ -98,11 +100,11 @@ export const ServicesSection = () => {
 const Service1 = () => {
 
     return (
-        <article className="flex flex-col items-start w-full gap-3 sm:gap-5 md:gap-8">
-            <TransitionImage src={MapImage} alt="img" className="rounded-xl" />
+        <article className="flex flex-col items-start w-full gap-3">
+            <TransitionImage src={MapImage} alt="img" className="rounded-xl w-full" />
 
-            <SkewScrollTriggerAnimation>
-                <h2 className="text-title3">開業・運営支援</h2>
+            <SkewScrollTriggerAnimation className="my-3">
+                <h2 className="text-title2">開業・運営支援</h2>
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation >
@@ -121,11 +123,11 @@ const Service1 = () => {
 
             <SkewScrollTriggerAnimation>
                 <p>
-                    集客の方法など、オープンするまで、<br />
-                    そしてオープンした後のことまで、<br />
+                    国内・国外で <HighlightMarker> 220店舗</HighlightMarker>以上のコンサルティング経験を活かして、<br />
                     皆様の不安・疑問が解消されますよう、詳しくご説明・ご案内いたします。
                 </p>
             </SkewScrollTriggerAnimation>
+            <Image src={Image_Flow} alt="img" className="h-36 w-auto" />
 
             <div className="mt-4 p-3 ml-auto">
                 <LinkButton href="/about" title="VIEW More" subTitle="もっとみる" />
@@ -138,15 +140,15 @@ const Service2 = () => {
     return (
         <SectionType1 className="mt-64 bg-color8 sm:mt-36 md:mt-48 lg:mt-56 relative" disableLine>
             {/* 旅人イラスト */}
-          <FadeAndSlideScrollTriggerAnimation
+            <FadeAndSlideScrollTriggerAnimation
                 transform={{ translate: { y: "100%" } }}
-                className="!absolute left-0 -z-10 w-48 md:w-60"
+                className="!absolute left-0 -z-10 w-40"
                 style={{ bottom: "calc(100% + 76px)" }}>
                 <Image src={Traveller} alt="旅人" />
             </FadeAndSlideScrollTriggerAnimation>
             <FadeAndSlideScrollTriggerAnimation
                 transform={{ translate: { y: "100%" } }}
-                className="!absolute right-0 -z-10 w-48 md:w-60"
+                className="!absolute right-0 -z-10 w-40"
                 style={{ bottom: "calc(100% + 76px)" }}>
                 <Image src={Traveller2} alt="旅人2" />
             </FadeAndSlideScrollTriggerAnimation>
@@ -266,6 +268,11 @@ const Service3 = () => {
                                         ゆったりとした時間をお過ごしいただけます。
                                     </p>
                                 </SkewScrollTriggerAnimation>
+
+                                <div className="mt-4 p-3 ml-auto flex gap-4 md:gap-8">
+                                    <LinkButton href="https://tabelog.com/tokyo/A1309/A130901/13005444/" target="_blank" title="VIEW More" subTitle="食べログ" />
+                                    <LinkButton href="https://galali-sendagaya.com/" title="VIEW More" subTitle="公式サイト" />
+                                </div>
                             </div>
                         </>
                     }
@@ -321,6 +328,11 @@ const Service3 = () => {
                                         外国の方や他県の方にも人気があります。
                                     </p>
                                 </SkewScrollTriggerAnimation>
+
+                                <div className="mt-4 p-3 ml-auto flex gap-4 md:gap-8">
+                                    <LinkButton href="https://www.hotpepper.jp/strJ000852634/" target="_blank" title="VIEW More" subTitle="ホットペッパー" />
+                                    <LinkButton href="https://galali-tsukuba.com/" title="VIEW More" subTitle="公式サイト" />
+                                </div>
                             </div>
                         </>
                     }
