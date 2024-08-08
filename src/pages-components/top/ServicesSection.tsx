@@ -148,7 +148,7 @@ const Service2 = () => {
             </FadeAndSlideScrollTriggerAnimation>
             <FadeAndSlideScrollTriggerAnimation
                 transform={{ translate: { y: "100%" } }}
-                className="!absolute right-0 -z-10 w-40"
+                className="!absolute right-0 sm:-right-8 -z-10 w-40"
                 style={{ bottom: "calc(100% + 76px)" }}>
                 <Image src={Traveller2} alt="旅人2" />
             </FadeAndSlideScrollTriggerAnimation>

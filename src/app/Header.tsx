@@ -26,12 +26,12 @@ export const Header = () => {
                 <div className="flex items-center">
                     <Image src={LogoImg} alt='logo' className='w-28' style={{filter:"saturate(0.4) hue-rotate(180deg)"}}/>
 
-                    <nav className="hidden lg:flex ml-auto gap-6 justify-end">
+                    <nav className="hidden md:flex ml-auto gap-6 justify-end">
                         {menuItems.map((item, index) => (
                             <Link
                                 key={index}
                                 href={item.href}
-                                className="text-gray-600 hover:text-color3 transition duration-300 font-bold"
+                                className="text-gray-600 hover:text-color3 transition duration-300 font-jost font-normal"
                             >
                                 {item.label}
                             </Link>

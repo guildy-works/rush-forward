@@ -40,7 +40,7 @@ export const TopSection = () => {
                             </FadeAndSlideAnimation>
 
                             <SkewScrollTriggerAnimation className="mt-8 sm:mt-16">
-                                <h1 className="text-title2 mt-5">
+                                <h1 className="text-title1 mt-5 font-jost font-light">
                                     Rush Forward
                                 </h1>
                             </SkewScrollTriggerAnimation>

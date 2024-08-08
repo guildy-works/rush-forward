@@ -23,7 +23,7 @@ export default function AboutSection() {
                 <SkewScrollTriggerAnimation innerClassName="mt-7 sm:mt-9 md:mt-12 text-size3">
                     <h3 className="text-title4">飲食店を通じて日本を、</h3>
                     <h3 className="mt-3 text-title4">世界を元気にする会社、</h3>
-                    <h3 className="mt-3 text-color3 text-title2">Rush Forward</h3>
+                    <h3 className="mt-3 text-color3 text-title2 font-jost">Rush Forward</h3>
                 </SkewScrollTriggerAnimation>
 
                 <SkewScrollTriggerAnimation className="space-y-2 text-gray-700 mt-3 sm:mt-5 md:mt-7 text-size2">

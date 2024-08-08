@@ -26,6 +26,7 @@ export const LinkButton = (
             <div className={clsx(styles.viewMore, className)}>
                 {
                     title && <h2
+                        className="font-jost font-light"
                         style={{
                             fontSize: "0.7rem",
                             userSelect: "none"
@@ -35,8 +36,8 @@ export const LinkButton = (
                     </h2>
                 }
                 <h2
+                    className="font-jost font-light"
                     style={{
-                        fontFamily: "'Jost', 'Noto Sans JP', sans-serif",
                         userSelect: "none"
                     }}>
                     {subTitle}
