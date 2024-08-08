@@ -269,9 +269,9 @@ const Service3 = () => {
                                     </p>
                                 </SkewScrollTriggerAnimation>
 
-                                <div className="mt-4 p-3 ml-auto flex gap-4 md:gap-8">
-                                    <LinkButton href="https://tabelog.com/tokyo/A1309/A130901/13005444/" target="_blank" title="VIEW More" subTitle="食べログ" />
-                                    <LinkButton href="https://galali-sendagaya.com/" title="VIEW More" subTitle="公式サイト" />
+                                <div className="mt-4 p-3 ml-auto flex flex-col sm:flex-row gap-4 md:gap- w-full sm:w-auto">
+                                    <LinkButton className="w-full sm:w-auto" href="https://tabelog.com/tokyo/A1309/A130901/13005444/" target="_blank" title="VIEW More" subTitle="食べログ" />
+                                    <LinkButton className="w-full sm:w-auto" href="https://galali-sendagaya.com/" title="VIEW More" subTitle="公式サイト" />
                                 </div>
                             </div>
                         </>
@@ -279,7 +279,7 @@ const Service3 = () => {
                     children2={
                         <>
                             <FadeAndSlideScrollTriggerAnimation>
-                                <h2 className="text-title3  [writing-mode:vertical-rl]">
+                                <h2 className="text-title4 [writing-mode:vertical-rl]">
                                     希少な奄美黒糖焼酎で<br />
                                     新たな感動を。
                                 </h2>
@@ -329,9 +329,9 @@ const Service3 = () => {
                                     </p>
                                 </SkewScrollTriggerAnimation>
 
-                                <div className="mt-4 p-3 ml-auto flex gap-4 md:gap-8">
-                                    <LinkButton href="https://www.hotpepper.jp/strJ000852634/" target="_blank" title="VIEW More" subTitle="ホットペッパー" />
-                                    <LinkButton href="https://galali-tsukuba.com/" title="VIEW More" subTitle="公式サイト" />
+                                <div className="mt-4 p-3 ml-auto flex flex-col sm:flex-row gap-4 md:gap- w-full sm:w-auto">
+                                    <LinkButton className="w-full sm:w-auto" href="https://www.hotpepper.jp/strJ000852634/" target="_blank" title="VIEW More" subTitle="ホットペッパー" />
+                                    <LinkButton className="w-full sm:w-auto" href="https://galali-tsukuba.com/" title="VIEW More" subTitle="公式サイト" />
                                 </div>
                             </div>
                         </>
@@ -339,7 +339,7 @@ const Service3 = () => {
                     children2={
                         <>
                             <FadeAndSlideScrollTriggerAnimation>
-                                <h2 className="text-title3  [writing-mode:vertical-rl]">
+                                <h2 className="text-title4  [writing-mode:vertical-rl]">
                                     茨城の食材を使った<br />
                                     地産地消の蕎麦居酒屋。
                                 </h2>
@@ -360,14 +360,14 @@ const RestaurantArticle = ({ image, children1, children2 }: {
 }) => (
     <div className="w-full flex flex-wrap justify-center">
 
-        <div className="md:w-3/5 flex justify-center items-center">
+        <div className="md:w-5/12 flex justify-center items-center sm:px-4">
             {/* 浮かせる余白 */}
             <div className="flex flex-col items-start gap-4 md:gap-8 ">
                 {children1}
             </div>
         </div>
 
-        <div className="md:w-2/5 mt-8">
+        <div className="w-full md:w-7/12 mt-8 sm:px-8 ">
             <ShopImageArticle image={image} >
                 {children2}
             </ShopImageArticle>
@@ -379,16 +379,16 @@ const ShopImageArticle = ({ image, children }: {
     image: StaticImageData
 }) => (
     <article
-        className="relative pb-12 w-full">
+        className="relative w-full max-w-2xl">
         {/* 装飾 */}
         <div className="bg-color7 absolute bottom-0 left-0 w-3/5 h-2/3"
             style={{ clipPath: "polygon(0 35%, 100% 0, 100% 100%, 0% 100%)" }}></div>
 
-        <div className="flex flex-wrap w-full">
-            <div className="flex flex-row-reverse p-12 md:p-12">
+        <div className="flex flex-wrap w-full pb-6 sm:pb-12">
+            <div className="flex flex-row-reverse p-6  sm:p-12 lg:p-16">
                 {children}
             </div>
-            <TransitionImage className="w-full h-full max-w-md" parallaxSlideLength={80} src={image} alt="img" />
+            <TransitionImage className="flex-1 " parallaxSlideLength={80} src={image} alt="img" />
         </div>
     </article>
 )

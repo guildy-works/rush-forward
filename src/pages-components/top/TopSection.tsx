@@ -56,7 +56,6 @@ export const TopSection = () => {
 
             <FadeAndSlideScrollTriggerAnimation transform={{ translate: { x: "90vw" } }}
                 className="bg-color7 w-full p-6 sm:p-12 md:p-24 relative mt-12 sm:mt-24 md:mt-48">
-
                 <div className="container max-w-screen-md mx-auto px-4 py-8 gap-8 sm:gap-16 md:gap-24 flex flex-wrap justify-center">
                     {/* 1番目の画像 */}
                     <FadeAndSlideScrollTriggerAnimation className="w-64 h-full">
@@ -88,8 +87,6 @@ export const TopSection = () => {
                         <TransitionImage src={Sub6Img} alt="料理" parallaxSlideLength={120} className="h-full object-cover rounded" />
                     </FadeAndSlideScrollTriggerAnimation>
                 </div>
-
-
             </FadeAndSlideScrollTriggerAnimation>
         </div>
 
