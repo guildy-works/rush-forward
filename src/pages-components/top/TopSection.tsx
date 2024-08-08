@@ -59,33 +59,33 @@ export const TopSection = () => {
 
                 <div className="container max-w-screen-md mx-auto px-4 py-8 gap-8 sm:gap-16 md:gap-24 flex flex-wrap justify-center">
                     {/* 1番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={500} className="w-64 h-full">
+                    <FadeAndSlideScrollTriggerAnimation className="w-64 h-full">
                         <TransitionImage src={Sub1Img} parallaxSlideLength={70} alt="がらり" className="h-full object-cover rounded" />
                     </FadeAndSlideScrollTriggerAnimation>
 
                     {/* 2番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={550} className="w-64 h-full">
+                    <FadeAndSlideScrollTriggerAnimation className="w-64 h-full">
                         <TransitionImage src={Sub2Img} alt="料理" className="h-full object-cover rounded" />
                     </FadeAndSlideScrollTriggerAnimation>
 
                     {/* 3番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={600} className="w-64 col-span-2 h-full">
+                    <FadeAndSlideScrollTriggerAnimation className="w-64 col-span-2 h-full">
                         <TransitionImage src={Sub3Img} alt="厨房" parallaxSlideLength={120} className="h-full object-cover rounded" />
                     </FadeAndSlideScrollTriggerAnimation>
 
                     {/* 4番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={700} className="w-64 col-span-2 h-full">
+                    <FadeAndSlideScrollTriggerAnimation className="w-64 col-span-2 h-full">
                         <TransitionImage src={Sub4Img} parallaxSlideLength={80} alt="レストラン" className="h-full object-cover rounded" />
                     </FadeAndSlideScrollTriggerAnimation>
 
                     {/* 5番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={750} className=" w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub5Img}  parallaxSlideLength={100}  alt="ワイン" className="h-full object-cover rounded" />
+                    <FadeAndSlideScrollTriggerAnimation className=" w-64 col-span-2 h-full">
+                        <TransitionImage src={Sub5Img} parallaxSlideLength={100} alt="ワイン" className="h-full object-cover rounded" />
                     </FadeAndSlideScrollTriggerAnimation>
 
                     {/* 6番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={750} className=" w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub6Img} alt="料理"  parallaxSlideLength={120}  className="h-full object-cover rounded" />
+                    <FadeAndSlideScrollTriggerAnimation className=" w-64 col-span-2 h-full">
+                        <TransitionImage src={Sub6Img} alt="料理" parallaxSlideLength={120} className="h-full object-cover rounded" />
                     </FadeAndSlideScrollTriggerAnimation>
                 </div>
 
