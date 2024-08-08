@@ -12,11 +12,11 @@ export const Header = () => {
 
     const menuItems = [
         { href: "/", label: "TOP" },
-        { href: "/about", label: "私たちについて" },
-        { href: "/services", label: "Works" },
-        { href: "/news", label: "お知らせ" },
-        { href: "/company", label: "会社概要" },
-        { href: "/contacts", label: "お問い合わせ" },
+        { href: "/about", label: "About" },
+        { href: "/services", label: "Service" },
+        { href: "/news", label: "News" },
+        { href: "/company", label: "Company" },
+        { href: "/contacts", label: "Contact" },
     ];
 
     return (

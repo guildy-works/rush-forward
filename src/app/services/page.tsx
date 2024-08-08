@@ -3,53 +3,73 @@
 import React from 'react';
 import { FadeAndSlideScrollTriggerAnimation } from '@/components/FadeAndSlideScriollTriggerAnimation';
 import { SectionBar } from '@/components/SectionBar';
+import { ChildPageHead } from "@/components/ChildPageHeadImage";
+import { TransitionImage } from "@/components/TransitionImage";
+import { ContactSection } from "@/pages-components/top/ContactSection";
+
+import TopImage from "@/assets/top1.jpg";
+
+import Sub4Img from "@/assets/img4.png";
+import Sub5Img from "@/assets/img8.jpg";
+import Sub6Img from "@/assets/img7.png";
 
 const ServicesPage = () => {
     return (
         <div className="bg-color2 min-h-screen">
-            {/* ヒーローセクション */}
-            <FadeAndSlideScrollTriggerAnimation >
-                <section className="bg-white py-24 px-4">
-                    <div className="container mx-auto ">
-                        <SectionBar text='Services' />
 
-                        <p className="text-title3 mt-8 mb-8">
-                            あなたの人生に新しい出会いと可能性を
-                        </p>
-                    </div>
-                </section>
-            </FadeAndSlideScrollTriggerAnimation>
+            <ChildPageHead src={TopImage} title="Service" subTitle="事業" />
 
-            {/* サービス概要 */}
-            <FadeAndSlideScrollTriggerAnimation>
-                <section className="bg-white py-16 px-4 mt-8 max-w-4xl mx-auto">
-                    <div className="container mx-auto">
+            {/* About概要 */}
+            <section className="bg-white py-16 px-4 pt-28 w-full relative">
+                <div className="absolute top-[-10%] left-1/2 translate-x-[-50%] shadow-[0px -2px 5px rgba[0,0,0,0.5]]">
+                    <FadeAndSlideScrollTriggerAnimation>
+                        <div className="container mx-auto text-left bg-white p-7">
+                            <p className="text-title3 mt-0 mb-8 text-center text-size1">
+                                私達は街を創る飲食の企画集団です。
+                            </p>                          
+                        </div>
+                    </FadeAndSlideScrollTriggerAnimation>
+                </div>
+                <FadeAndSlideScrollTriggerAnimation>
+                    <div className="container mx-auto text-center">
                         <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                            Match Bondは、様々なパートナーと協力し、婚活をより楽しく、
-                            安心していただけるためのサービスを提供しています。
-                            私たちは、単なる出会いの場を提供するだけでなく、
-                            あなたの人生をより豊かにする体験と機会を創出します。
+                            <span className="block">飲食店を開業される皆様の夢と熱い想いに寄り添い、</span>
+                            <span className="block">皆様が永くご店舗を経営していただけるよう、</span>
+                            <span className="block">しっかりサポートさせていただきます。</span>
                         </p>
                     </div>
-                    <div className="container mx-auto">
-                        <h2 className="text-4xl font-bold mb-12 text-center text-purple-800">Match Bond の特徴</h2>
-                        <ul className="space-y-6">
-                            {features.map((feature, index) => (
-                                <li key={index} className="flex items-center text-xl">
-                                    <svg className="w-8 h-8 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span>{feature}</span>
-                                </li>
-                            ))}
-                        </ul>
+                </FadeAndSlideScrollTriggerAnimation>
+
+                <FadeAndSlideScrollTriggerAnimation transform={{ translate: { x: "90vw" } }} className="bg-white w-full p-3 sm:p-5 md:p-5 relative mt-0 ">
+
+                    <div className="container max-w-screen-md mx-auto px-4 py-8 gap-8 sm:gap-16 md:gap-24 flex flex-wrap justify-center">
+                        {/* 4番目の画像 */}
+                        <FadeAndSlideScrollTriggerAnimation delay={700} className="w-64 col-span-2 h-full">
+                            <TransitionImage src={Sub4Img} parallaxSlideLength={80} alt="レストラン" className="h-full object-cover rounded" />
+                        </FadeAndSlideScrollTriggerAnimation>
+
+                        {/* 5番目の画像 */}
+                        <FadeAndSlideScrollTriggerAnimation delay={750} className=" w-64 col-span-2 h-full">
+                            <TransitionImage src={Sub5Img}  parallaxSlideLength={100}  alt="ワイン" className="h-full object-cover rounded" />
+                        </FadeAndSlideScrollTriggerAnimation>
+
+                        {/* 6番目の画像 */}
+                        <FadeAndSlideScrollTriggerAnimation delay={750} className=" w-64 col-span-2 h-full">
+                            <TransitionImage src={Sub6Img} alt="料理"  parallaxSlideLength={120}  className="h-full object-cover rounded" />
+                        </FadeAndSlideScrollTriggerAnimation>
                     </div>
-                </section>
-            </FadeAndSlideScrollTriggerAnimation>
+
+                </FadeAndSlideScrollTriggerAnimation>
+
+
+
+            </section>
 
             {/* サービス一覧 */}
             <section className="py-24 px-4">
                 <div className="container mx-auto">
                     <h2 className="text-4xl font-bold mb-16 text-center text-color3">提供サービス</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
                         {serviceItems.map((item, index) => (
                             <FadeAndSlideScrollTriggerAnimation key={index}>
                                 <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
@@ -61,6 +81,7 @@ const ServicesPage = () => {
                                         />
                                     </div>
                                     <h3 className="text-2xl font-semibold mb-4 text-gray-800">{item.title}</h3>
+                                    <p className="text-2xl font-semibold mb-4 text-gray-800">{item.subtitle}</p>
                                     <p className="text-gray-600 leading-relaxed">
                                         {item.description}
                                     </p>
@@ -71,52 +92,35 @@ const ServicesPage = () => {
                 </div>
             </section>
 
-            {/* CTAセクション */}
-            <FadeAndSlideScrollTriggerAnimation>
-                <section className="py-24 px-4 rounded-lg max-w-5xl mx-auto my-16">
-                    <div className="container mx-auto text-center">
-                        <h2 className="text-4xl font-bold mb-6">新しい出会いを見つけましょう</h2>
-                        <p className="text-xl mb-12">Match Bond</p>
-                        <button className="bg-black text-white px-12 py-4 rounded-full text-xl font-semibold hover:bg-purple-100 transition duration-300 shadow-md">
-                            無料で相談する
-                        </button>
-                    </div>
-                </section>
-            </FadeAndSlideScrollTriggerAnimation>
+            <ContactSection />
         </div>
     );
 };
 
 const serviceItems = [
     {
-        image: "/img2.jpg",
-        title: "マッチング・コンサルティング",
-        description: "年齢が近い参加者同士の合コンをセッティング。司会進行、席替え、ゲームなどで和やかな雰囲気を演出し、特に女性が安心できる環境づくりに注力しています。"
+        image: "@/assets/img4.png",
+        title: "Producing / Consulting",
+        subtitle: "プロデュース・コンサルティング部門",
+        description: "運営コンサルティング・開業プロデュースを中心に、様々なサポートを行っております。"
     },
     {
         image: "/img.jpg",
-        title: "Match婚・イベント開催",
-        description: "婚活イベントから地域貢献活動まで、多様な出会いの機会を提供。新しい経験、学び、地域社会との繋がりを深める場として機能します。"
+        title: " Gastronomy Tourism",
+        subtitle: "ガストロノミーツーリズム部門",
+        description: "観光立国として日本を持続的に活性化するため、世界中からフーディーズを集めます！"
     },
     {
         image: "/option-photo.jpg",
-        title: "撮影",
-        description: "プロのカメラマンがあなたのお気に入りの場所でプロフィールを撮影します。福山市内(内海以外）は無料で出張。お気に入りの場所を教えてください。"
+        title: "Hotel",
+        subtitle: "ホテルプロデュース・再生部門",
+        description: "地元の食材や資源を活用し、他の宿泊施設では体験できないような唯一無二の宿泊施設を創ります。"
     },
     {
         image: "/option-makeup.jpg",
-        title: "メイク講座",
-        description: "メイク初心者向けの個別講座を提供。自信を持ってお洒落を楽しめるよう、丁寧にサポートします。"
-    },
-    {
-        image: "/option-fashion.jpg",
-        title: "メンズコーディネーター",
-        description: "Match-Bond専属のコーディネーターが、ファッション、ヘアセット、メンズメイク、スキンケアなど、男性の総合的な魅力向上をサポートします。"
-    },
-    {
-        image: "/option-uranai.jpg",
-        title: "占いサービス",
-        description: "高評価の占い師COCOさんによる占いサービス。10分1,000円からご利用いただけます。"
+        title: "Restaurant",
+        subtitle: "飲食店部門",
+        description: "紹介テキスト紹介テキスト紹介テキスト紹介テキスト紹介テキスト紹介テキスト紹介テキスト"
     }
 ];
 
