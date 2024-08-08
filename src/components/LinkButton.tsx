@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./LinkButton.module.scss";
 import clsx from "clsx";
-import Arrow from "@/assets/images/arrow.svg";
+import Arrow from "@/assets/images/Arrow.svg";
 
 export const LinkButton = (
     {
