@@ -1,9 +1,10 @@
 'use client'
 
-import { css } from "@emotion/css";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./LinkButton.module.scss";
 import clsx from "clsx";
+import Arrow from "@/assets/images/arrow.svg";
 
 export const LinkButton = (
     {
@@ -42,6 +43,8 @@ export const LinkButton = (
                     }}>
                     {subTitle}
                 </h2>
+
+                <Image alt="Arrow" className={styles.arrow} src={Arrow} />
             </div>
         </Link>
     );
