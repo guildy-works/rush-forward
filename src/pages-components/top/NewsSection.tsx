@@ -41,7 +41,7 @@ export const NewsSection = () => {
     )
 }
 
-const NewsItem = (props: {
+export const NewsItem = (props: {
     news: News
 }) => {
     const { news } = props;
