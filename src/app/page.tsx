@@ -7,8 +7,6 @@ import { ScrollIndicator } from "@/components/ScrollIndicatior";
 import { SectionBar } from "@/components/SectionBar";
 import { TopSection } from "@/pages-components/top/TopSection";
 import { NewsSection } from "@/pages-components/top/NewsSection";
-import { ScrollContainer } from "@/libs/ScrollTrigger";
-import { EventsSection } from "@/pages-components/top/EventsSection";
 import AboutSection from "@/pages-components/top/AboutSection";
 
 import '@splidejs/splide/css'; 
