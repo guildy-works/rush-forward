@@ -122,10 +122,10 @@ const Service1 = () => {
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation>
-                <p>
+                <div>
                     国内・国外で <HighlightMarker> 220店舗</HighlightMarker>以上のコンサルティング経験を活かして、<br />
                     皆様の不安・疑問が解消されますよう、詳しくご説明・ご案内いたします。
-                </p>
+                </div>
             </SkewScrollTriggerAnimation>
             <Image src={Image_Flow} alt="img" className="h-36 w-auto" />
 
