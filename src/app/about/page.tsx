@@ -6,6 +6,8 @@ import { SectionBar } from '@/components/SectionBar';
 import { ChildPageHead } from "@/components/ChildPageHeadImage";
 import Image from "next/image";
 import { TransitionImage } from "@/components/TransitionImage";
+import AboutSection from "@/pages-components/about/AboutSection";
+
 
 import TopImage from "@/assets/top1.jpg";
 import CEOImage from "@/assets/top.jpg";
@@ -17,57 +19,8 @@ import Sub6Img from "@/assets/img7.png";
 const ServicesPage = () => {
     return (
         <div className="min-h-screen">
-            <ChildPageHead src={TopImage} title="About" subTitle="理念" />
+            <AboutSection/>
 
-            {/* About概要 */}
-            <section className="bg-white py-16 px-4 pt-28 w-full relative">
-                <div className="absolute top-[-10%] left-1/2 translate-x-[-50%] shadow-[0px -2px 5px rgba[0,0,0,0.5]]">
-                    <FadeAndSlideScrollTriggerAnimation>
-                        <div className="container mx-auto text-left bg-white p-7">
-                            <p className="text-title3 mt-0 mb-8 text-center text-size1">
-                                飲食店を通じて日本を、世界を元気にする会社
-                            </p>
-                            <p className="text-title3 mt-8 mb-0 text-center text-size2">
-                                Rush Forward
-                            </p>                            
-                        </div>
-                    </FadeAndSlideScrollTriggerAnimation>
-                </div>
-                <FadeAndSlideScrollTriggerAnimation>
-                    <div className="container mx-auto text-center">
-                        <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                            <span className="block">私達は街を創る飲食の企画集団です。</span>
-                            <span className="block">日本全国・海外を含めて220 店舗以上の飲食店をお手伝いしてきました。</span>
-                            <span className="block">そのノウハウを活かし、観光立国JAPANの実現に向けて、日本の食文化・魅力を世界に発信していきます</span>
-                        </p>
-                    </div>
-                </FadeAndSlideScrollTriggerAnimation>
-
-                <FadeAndSlideScrollTriggerAnimation transform={{ translate: { x: "90vw" } }}
-                className="bg-white w-full p-3 sm:p-5 md:p-5 relative mt-0 ">
-
-                <div className="container max-w-screen-md mx-auto px-4 py-8 gap-8 sm:gap-16 md:gap-24 flex flex-wrap justify-center">
-                    {/* 4番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={700} className="w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub4Img} parallaxSlideLength={80} alt="レストラン" className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-
-                    {/* 5番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={750} className=" w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub5Img}  parallaxSlideLength={100}  alt="ワイン" className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-
-                    {/* 6番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation delay={750} className=" w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub6Img} alt="料理"  parallaxSlideLength={120}  className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-                </div>
-
-
-            </FadeAndSlideScrollTriggerAnimation>
-
-
-            </section>
             <section className="bg-slate-300 py-16 px-4 w-full relative">
                 <FadeAndSlideScrollTriggerAnimation>
                     <div className="container mx-auto text-center">
