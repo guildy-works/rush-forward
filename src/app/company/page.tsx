@@ -6,6 +6,7 @@ import { SectionBar } from '@/components/SectionBar';
 import { ChildPageHead } from "@/components/ChildPageHeadImage";
 import Image from "next/image";
 import { TransitionImage } from "@/components/TransitionImage";
+import HeadSection from "@/pages-components/company/HeadSection";
 
 import TopImage from "@/assets/top1.jpg";
 import CEOImage from "@/assets/top.jpg";
@@ -17,7 +18,7 @@ import Sub6Img from "@/assets/img7.png";
 const ServicesPage = () => {
     return (
         <div className="min-h-screen">
-            <ChildPageHead src={TopImage} title="Company" subTitle="会社概要" />
+            <HeadSection />
 
             {/* About概要 */}
             <section className="bg-white py-16 px-4 pt-28 ml-auto mr-auto w-full relative max-w-screen-md">
@@ -66,22 +67,6 @@ const ServicesPage = () => {
             </FadeAndSlideScrollTriggerAnimation>
 
 
-            </section>
-            <section className="bg-slate-300 py-16 px-4 w-full relative">
-                <FadeAndSlideScrollTriggerAnimation>
-                    <div className="container mx-auto text-center">
-                        <p className="text-title3 mt-8 mb-8">
-                            代表の言葉
-                        </p>
-                        <p className="text-xl text-gray-700 mb-8 leading-relaxed text-center">
-                            <span className="block">テキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキスト</span>
-                        </p>
-                    </div>
-                </FadeAndSlideScrollTriggerAnimation>
             </section>
 
         </div>
