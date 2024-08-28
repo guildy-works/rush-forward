@@ -7,7 +7,8 @@ import { ChildPageHead } from "@/components/ChildPageHeadImage";
 import Image from "next/image";
 import { TransitionImage } from "@/components/TransitionImage";
 import AboutSection from "@/pages-components/about/AboutSection";
-
+import { SectionType1 } from "@/components/SectionType1"
+import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation"
 
 import TopImage from "@/assets/top1.jpg";
 import CEOImage from "@/assets/top.jpg";
@@ -21,22 +22,28 @@ const ServicesPage = () => {
         <div className="min-h-screen">
             <AboutSection/>
 
-            <section className="bg-slate-300 py-16 px-4 w-full relative">
-                <FadeAndSlideScrollTriggerAnimation>
-                    <div className="container mx-auto text-center">
-                        <p className="text-title3 mt-8 mb-8">
-                            代表の言葉
-                        </p>
-                        <p className="text-xl text-gray-700 mb-8 leading-relaxed text-center">
-                            <span className="block">テキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキスト</span>
-                        </p>
-                    </div>
-                </FadeAndSlideScrollTriggerAnimation>
-            </section>
+            <SectionType1 className="bg-color8 sm:mt-36 md:mt-48 lg:mt-56 relative" disableLine>
+
+            <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full flex-col <!--md:-mt-64--> md:flex-row" >
+                <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center mt-auto pb-12 ml-0">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-color2 text-title2">代表挨拶</p>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">飲食店の新規開業は、ワクワクする気持ちと共に、不安、疑問が混在されているものと思います。</p>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">
+                            飲食店の新規開業は、ワクワクする気持ちと共に、不安、疑問が混在されているものと思います。<br />
+                            飲食店開業をお考えの方が、まず行うべきことである事業計画などの事前準備から、<br />
+                            資金調達の方法、物件の探し方、内外装について、必要な厨房機器や設備と選び方、<br />
+                            国内・国外で 220店舗 以上のコンサルティング経験を活かして、<br />
+                            皆様の不安・疑問が解消されますよう、詳しくご説明・ご案内いたします。</p>
+                    </SkewScrollTriggerAnimation>
+                </div>
+            </div>
+
+            </SectionType1>
 
         </div>
     );
