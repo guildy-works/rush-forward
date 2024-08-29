@@ -14,6 +14,10 @@ import SmallImage4 from "@/assets/small_img4.png";
 import { SectionType1 } from "@/components/SectionType1";
 import { Section1Title } from "@/components/Section1Title";
 
+import Gastro9 from "@/assets/images/gastro/gstro9.jpg"
+import Gastro11 from "@/assets/images/gastro/gstro11.webp"
+
+
 export default function HeadSection() {
 
     return (
@@ -43,19 +47,19 @@ export default function HeadSection() {
             </div>
 
             <FadeAndSlideScrollTriggerAnimation className="!absolute w-28 sm:w-36 left-8 bottom-64  md:left-12 md:bottom-0 xl:-left-12 md:top-full">
-                <TransitionImage2 imgClassName="rounded-xl" src={SmallImage2} alt="img" />
+                <TransitionImage2 imgClassName="rounded-xl" src={SmallImage4} alt="img" />
             </FadeAndSlideScrollTriggerAnimation>
 
             <FadeAndSlideScrollTriggerAnimation className="!absolute w-24 sm:w-32 right-6  sm:right-1/3 bottom-48 md:right-12 md:bottom-64 lg:top-16" >
-                <TransitionImage2 imgClassName="rounded-xl" parallaxSlideLength={80} src={SmallImage1} alt="img" />
+                <TransitionImage2 imgClassName="rounded-xl" parallaxSlideLength={80} src={Gastro9} alt="img" />
             </FadeAndSlideScrollTriggerAnimation>
 
             <FadeAndSlideScrollTriggerAnimation className="!absolute w-24 sm:w-32 md:w-48 left-12 sm:left-1/4 bottom-24 md:left-auto md:right-1/3 md:top-1/3">
-                <TransitionImage2 imgClassName="rounded-xl" src={SmallImage3} parallaxSlideLength={20} alt="img" />
+                <TransitionImage2 imgClassName="rounded-xl" src={Gastro11} parallaxSlideLength={20} alt="img" />
             </FadeAndSlideScrollTriggerAnimation>
 
             <FadeAndSlideScrollTriggerAnimation className="!absolute w-28 sm:w-32 md:w-48 right-6 bottom-4 md:right-48 md:top-3/4">
-                <TransitionImage2 imgClassName="rounded-xl" src={SmallImage4} parallaxSlideLength={40} alt="img" />
+                <TransitionImage2 imgClassName="rounded-xl" src={SmallImage1} parallaxSlideLength={40} alt="img" />
             </FadeAndSlideScrollTriggerAnimation>
         </SectionType1>
     );

@@ -86,13 +86,13 @@ const Service1 = () => {
             {/* Right */}
             <div className="w-full flex flex-wrap gap-8 sm:gap-20 p-3 sm:p-5 md:p-8 justify-between">
                 <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full mt-12" >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro4} alt="img" />
+                    <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Image1_GarariSendagaya} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
                 <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto md:ml-0 md:mt-32"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro5} alt="img" />
+                    <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro2} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
                 <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro6} alt="img" />
+                    <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Image9_AoyamaGarariTsukuba} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
 
             </div>
@@ -111,16 +111,16 @@ const Service2 = () => {
                     <TransitionImage className="max-w-sm w-full" src={Gastro} alt="ProduceImage" />
                 </div>
                 <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center mt-auto pb-12 ml-0  items-start">
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-white">
                         <h3 className="text-title1 text-font1">ガストロノミーツーリズム</h3>
                         <h3 className="text-title2 text-font3">Gastronomy Tourism</h3>
                     </SkewScrollTriggerAnimation>
 
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-white">
                         <h4 className="text-title4 text-font2">地方から世界へ！↔世界から地方へ！</h4>
                     </SkewScrollTriggerAnimation>
 
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-white">
                         <p className="text-size-p-wide">
                             観光立国として日本を持続的に活性化するため、<br />
                             世界中からフーディーズを集めます！

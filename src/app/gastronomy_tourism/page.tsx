@@ -21,10 +21,18 @@ import Sub6Img from "@/assets/img7.png";
 import Sub1Img from "@/assets/img1.jpg";
 
 import Gastro from "@/assets/images/gastro/gstro.webp"
-
+import Gastro1 from "@/assets/images/gastro/gstro1.webp"
+import Gastro2 from "@/assets/images/gastro/gstro2.jpg"
+import Gastro3 from "@/assets/images/gastro/gstro3.webp"
 import Gastro4 from "@/assets/images/gastro/gstro4.webp"
 import Gastro5 from "@/assets/images/gastro/gstro5.jpg"
 import Gastro6 from "@/assets/images/gastro/gstro6.jpg"
+import Gastro7 from "@/assets/images/gastro/gstro7.webp"
+import Gastro8 from "@/assets/images/gastro/gstro8.jpg"
+import Gastro9 from "@/assets/images/gastro/gstro9.jpg"
+import Gastro10 from "@/assets/images/gastro/gstro10.jpg"
+import Gastro11 from "@/assets/images/gastro/gstro11.webp"
+import Gastro12 from "@/assets/images/gastro/gstro12.webp"
 
 
 import MapImage from "@/assets/map.svg"
@@ -213,13 +221,13 @@ const ServicesPage = () => {
             </div>
                 <div className="w-full flex flex-wrap gap-8 sm:gap-20 p-3 sm:p-5 md:p-8 justify-between">
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full mt-12" >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro4} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro3} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto md:ml-0 md:mt-32"  >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro5} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro9} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full"  >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro6} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro7} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                 </div>
             </SectionType1>

@@ -14,6 +14,7 @@ import {ServicesSection} from "@/pages-components/service/ServicesSection";
 import HeadSection from "@/pages-components/service/ProduceHeadSection";
 
 import TopImage from "@/assets/top1.jpg";
+import Sub3Img from "@/assets/img3.png";
 import Sub4Img from "@/assets/img4.png";
 import Sub5Img from "@/assets/img8.jpg";
 import Sub6Img from "@/assets/img7.png";
@@ -35,13 +36,13 @@ const ServicesPage = () => {
 
             <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full flex-col <!--md:-mt-64--> md:flex-row" >
                 <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center mt-auto pb-12 ml-0  items-start">
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-white">
                         <p className="text-color2 text-title2">これから飲食店の開業をお考えですか？</p>
                     </SkewScrollTriggerAnimation>
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-white">
                         <p className="text-size-p-wide">飲食店の新規開業は、ワクワクする気持ちと共に、不安、疑問が混在されているものと思います。</p>
                     </SkewScrollTriggerAnimation>
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-white">
                         <p className="text-size-p-wide">
                             飲食店の新規開業は、ワクワクする気持ちと共に、不安、疑問が混在されているものと思います。<br />
                             飲食店開業をお考えの方が、まず行うべきことである事業計画などの事前準備から、<br />
@@ -158,13 +159,13 @@ const ServicesPage = () => {
             </div>
                 <div className="w-full flex flex-wrap gap-8 sm:gap-20 p-3 sm:p-5 md:p-8 justify-between">
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full mt-12" >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro4} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Sub4Img} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto md:ml-0 md:mt-32"  >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro5} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Sub5Img} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full"  >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro6} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Sub6Img} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                 </div>
             </SectionType1>
@@ -259,13 +260,13 @@ const ServicesPage = () => {
             </div>
                 <div className="w-full flex flex-wrap gap-8 sm:gap-20 p-3 sm:p-5 md:p-8 justify-between">
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full mt-12" >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro4} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Sub1Img} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto md:ml-0 md:mt-32"  >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro5} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={TopImage} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                     <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full"  >
-                        <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro6} alt="img" />
+                        <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Sub3Img} alt="img" />
                     </FadeAndSlideScrollTriggerAnimation>
                 </div>
             </SectionType1>

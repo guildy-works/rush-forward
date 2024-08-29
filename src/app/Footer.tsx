@@ -2,12 +2,11 @@ import Link from "next/link";
 
 const sitemapItems = [
     { name: 'TOP', path: '/' },
-    { name: 'サービス', path: '/services' },
-    { name: 'お知らせ', path: '/news' },
-    { name: 'イベント情報', path: '/events' },
-    { name: 'Match Bondの想い', path: '/about' },
-    { name: '会社概要', path: '/company' },
-    { name: 'お問い合わせ', path: '/contact' },
+    { name: 'About', path: '/about' },
+    { name: 'Service', path: '/services' },
+    { name: 'News', path: '/news' },
+    { name: 'Company', path: '/company' },
+    { name: 'Contact', path: '/contact' },
 ];
 
 export const Footer = () => {

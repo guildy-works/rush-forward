@@ -12,14 +12,14 @@ import SmallImage2 from "@/assets/small_img2.png";
 import SmallImage3 from "@/assets/small_img3.png";
 import SmallImage4 from "@/assets/small_img4.png";
 import { SectionType1 } from "@/components/SectionType1";
-import { Section1Title } from "@/components/Section1Title";
+import { SectionTitleChild } from "@/components/SectionTitleChild";
 
 export default function HeadSection() {
 
     return (
         <SectionType1>
             <div className=" justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full md:w-2/5">
-                <Section1Title title="Produce / Consulting" subTitle="事業・運営支援" />
+                <SectionTitleChild title="Produce / Consulting" subTitle="事業・運営支援" />
 
                 <SkewScrollTriggerAnimation className="space-y-2 text-gray-700 mt-3 sm:mt-5 md:mt-7 text-size2">
                     <p className="text-color2 text-title4">当社では、開業プロデュース及び運営コンサルティングを行っています。</p>

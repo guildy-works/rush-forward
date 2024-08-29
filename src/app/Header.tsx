@@ -26,7 +26,13 @@ export const Header = () => {
                 <div className="flex items-center">
                     <Image src={LogoImg} alt='logo' className='w-28' style={{filter:"saturate(0.4) hue-rotate(180deg)"}}/>
 
-                    <nav className="hidden md:flex ml-auto gap-6 justify-end">
+                    <input id="checkbox1" type="checkbox" className="hidden peer" />
+                    <label for="checkbox1" className="md:hidden cursor-pointer hmbgbutton">
+                        <span className="border-a hmbgborder"></span>
+                        <span className="border-b hmbgborder"></span>
+                        <span className="border-c hmbgborder"></span>
+                    </label>
+                    <nav className="Menuhnbg md:flex ml-auto gap-6 justify-end">
                         {menuItems.map((item, index) => (
                             <Link
                                 key={index}
@@ -37,12 +43,6 @@ export const Header = () => {
                             </Link>
                         ))}
                     </nav>
-                    <button
-                        className="lg:hidden text-gray-600 hover:text-color3 focus:outline-none"
-                        onClick={toggleMenu}
-                    >
-                        {isMenuOpen ? "✕" : "☰"}
-                    </button>
                 </div>
             </div>
 
