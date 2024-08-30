@@ -30,15 +30,21 @@ const ServicesPage = () => {
                         <p className="text-color2 text-title2">代表挨拶</p>
                     </SkewScrollTriggerAnimation>
                     <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-title4">飲食店の新規開業は、ワクワクする気持ちと共に、不安、疑問が混在されているものと思います。</p>
+                        <p className="text-title4">これまで、日本全国や海外で220店舗以上の飲食店をプロデュースする中で、さまざまな出会いや学びを通じて、「食」が持つ大きな力に魅了されてきました。</p>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">食を通じて人と人がつながり、地域が活気づく様子を目の当たりにするたびに、「もっと食を通じて新しい体験や感動を生み出したい」「地域を元気にするお手伝いがしたい」という想いが自然と深まっていったのです。</p>
                     </SkewScrollTriggerAnimation>
                     <SkewScrollTriggerAnimation innerClassName="!bg-color8">
                         <p className="text-title4">
-                            飲食店の新規開業は、ワクワクする気持ちと共に、不安、疑問が混在されているものと思います。<br />
-                            飲食店開業をお考えの方が、まず行うべきことである事業計画などの事前準備から、<br />
-                            資金調達の方法、物件の探し方、内外装について、必要な厨房機器や設備と選び方、<br />
-                            国内・国外で 220店舗 以上のコンサルティング経験を活かして、<br />
-                            皆様の不安・疑問が解消されますよう、詳しくご説明・ご案内いたします。</p>
+                            今後は、私たちの経験とノウハウを活かし、「ガストロノミーツーリズム」に力を入れていきます。日本の魅力を国内外に広め、多くの人に幸せな瞬間を届けることができるよう、挑戦を続けていくつもりです。
+                        </p>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">
+                            また、私たちはお互いを尊重し、支え合いながら進んでいける環境を大切にしています。社員一人ひとりが前向きに、楽しく働ける職場であることを心がけています。<br />
+                            これからも新しい挑戦を通じて成長し、多くの皆さんと素晴らしい未来を創っていければと思っています。
+                        </p>
                     </SkewScrollTriggerAnimation>
                 </div>
             </div>

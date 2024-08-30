@@ -20,10 +20,10 @@ export const Header = () => {
     ];
 
     return (
-        <div className="p-4 bg-white  flex flex-col ">
+        <div className="p-4 bg-white  flex flex-col">
 
-            <div className="mt-auto mxl-auto h-20">
-                <div className="flex items-center">
+            <div className="mt-auto mxl-auto h-20 fixed top-0 w-full z-50">
+                <div className="flex items-center p-5">
                     <Image src={LogoImg} alt='logo' className='w-28' style={{filter:"saturate(0.4) hue-rotate(180deg)"}}/>
 
                     <input id="checkbox1" type="checkbox" className="hidden peer" />
@@ -32,7 +32,7 @@ export const Header = () => {
                         <span className="border-b hmbgborder"></span>
                         <span className="border-c hmbgborder"></span>
                     </label>
-                    <nav className="Menuhnbg md:flex ml-auto gap-6 justify-end">
+                    <nav className="Menuhnbg md:flex ml-auto gap-6 justify-end pr-6">
                         {menuItems.map((item, index) => (
                             <Link
                                 key={index}
