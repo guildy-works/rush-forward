@@ -2,9 +2,7 @@ import Image, { StaticImageData } from "next/image";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-
 import Top2Image from "@/assets/top1.jpg";
-
 import LogoImg from "@/assets/logo-dtl.png";
 import gsap, { Power1, Power0 } from 'gsap';
 import { useGSAP } from '@gsap/react';

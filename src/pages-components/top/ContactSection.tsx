@@ -1,11 +1,12 @@
 import { SectionType1 } from "@/components/SectionType1"
+import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
 
 export const ContactSection = () => {
 
     return (
         <SectionType1 disableLine className="bg-color8" innerClassName="items-center">
 
-                <div className="bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32">
+                <FadeAndSlideScrollTriggerAnimation className="bg-white p-8 rounded-sm md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col items-center justify-center">
                     <h2 className="text-title2 font-bold text-center mb-2">CONTACT</h2>
                     <p className="text-center text-gray-600 mb-8">お問い合わせ・ご相談はお気軽にどうぞ。</p>
 
@@ -22,7 +23,7 @@ export const ContactSection = () => {
                             </svg>
                         </a>
                     </div>
-                </div>
+                </FadeAndSlideScrollTriggerAnimation>
    
         </SectionType1>
     )

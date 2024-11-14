@@ -3,7 +3,7 @@ import { TransitionImage } from "@/components/TransitionImage"
 
 
 
-import MapImage from "@/assets/map.svg"
+import MapImage from "@/assets/images/map.png"
 import { SectionType1 } from "@/components/SectionType1"
 import { Section1Title } from "@/components/Section1Title"
 
@@ -39,15 +39,15 @@ export const ServicesSection = () => {
     return (
         <>
             <SectionType1 innerClassName="flex-wrap !flex-row">
-                <div className=" justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full md:w-3/5">
+                <div className=" justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 max-w-full">
                     <Section1Title title="Service" subTitle="事業" />
 
                     <SkewScrollTriggerAnimation className="space-y-2 text-gray-700 mt-3 sm:mt-5 md:mt-7 text-size2">
                         <h3 className="text-color2 text-title4">私達は街を創る飲食の企画集団です。</h3>
                     </SkewScrollTriggerAnimation>
-                    <SkewScrollTriggerAnimation delay={100} className="space-y-2 text-gray-700 text-size2">
+                    <FadeAndSlideScrollTriggerAnimation delay={100} className="space-y-2 text-gray-700 text-size2">
                         <p>飲食店を開業される皆様の夢と熱い想いに寄り添い、</p>
-                    </SkewScrollTriggerAnimation>
+                    </FadeAndSlideScrollTriggerAnimation>
                     <SkewScrollTriggerAnimation className="space-y-2 text-gray-700 text-size2">
                         <p>皆様が永くご店舗を経営していただけるよう、 </p>
                     </SkewScrollTriggerAnimation>
@@ -55,79 +55,78 @@ export const ServicesSection = () => {
                         <p>しっかりサポートさせていただきます。</p>
                     </SkewScrollTriggerAnimation>
 
-                    <LinkButton href="/about" title="VIEW More" subTitle="もっとみる" className="mt-5" />
-
-                    {/* 写真エリア */}
-                    <div className="flex-1 w-full relative gap-24 flex flex-wrap justify-center items-center pl-0 sm:pr-8">
-                        <div className="w-full flex flex-wrap gap-4 sm:gap-6 lg:gap-12">
-                            <FadeAndSlideScrollTriggerAnimation className="max-w-36 lg:max-w-48 w-full mt-12" >
-                                <TransitionImage className="rounded-md" parallaxSlideLength={25} src={Gastro2} alt="img" />
-                            </FadeAndSlideScrollTriggerAnimation>
-                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-36 w-full  md:ml-0 md:mt-32"  >
-                                <TransitionImage className="rounded-md" parallaxSlideLength={60} src={Gastro12} alt="img" />
-                            </FadeAndSlideScrollTriggerAnimation>
-                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 w-full mt-3"  >
-                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro7} alt="img" />
-                            </FadeAndSlideScrollTriggerAnimation>
-                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-16 w-full"  >
-                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro11} alt="img" />
-                            </FadeAndSlideScrollTriggerAnimation>
-                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-24 w-full"  >
-                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro8} alt="img" />
-                            </FadeAndSlideScrollTriggerAnimation>
-                            <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-12 w-full"  >
-                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro10} alt="img" />
-                            </FadeAndSlideScrollTriggerAnimation>
-                        </div>
-                    </div>
+                    <LinkButton href="/services" title="SERVICES" subTitle="もっとみる" outerClass="mt-5 ml-auto mb-12" />
                 </div>
-                <div className="mt-12 sm:mt-16 md:mt-24 w-full md:w-2/5 flex flex-wrap">
+                <div className="flex flex-wrap gap-4 md:gap-12 mx-auto">
                     <Service1 />
-
+                    <Service2 />
                 </div>
+
             </SectionType1>
 
             <RestaurantSection />
         </>
     )
 }
-
 const Service1 = () => {
 
     return (
-        <article className="flex flex-col items-start w-full gap-3">
-            <TransitionImage src={MapImage} alt="img" className="rounded-md w-full" />
+        <article className="flex flex-col gap-3 bg-color9 p-3 md:p-8 max-w-md rounded-lg">
+            <TransitionImage src={MapImage} alt="img" className="rounded-md h-60" />
 
-            <SkewScrollTriggerAnimation className="my-3">
-                <h2 className="text-title2">開業・運営支援</h2>
-            </SkewScrollTriggerAnimation>
-
-            <SkewScrollTriggerAnimation >
-                <p>
+            <div className="">
+                <FadeAndSlideScrollTriggerAnimation className="my-3" tag="h3" innerClassName="text-title2 text-font2" >
+                    開業・運営支援
+                </FadeAndSlideScrollTriggerAnimation>
+                <FadeAndSlideScrollTriggerAnimation >
                     これから飲食店の開業をお考えですか？<br />
-                    飲食店の新規開業は、ワクワクする気持ちと共に、不安、疑問が混在されているものと思います。<br />
-                </p>
-            </SkewScrollTriggerAnimation>
-
-            <SkewScrollTriggerAnimation tag="p">
-                飲食店開業をお考えの方が、まず行うべきことである事業計画などの事前準備から、<br />
-                資金調達の方法、物件の探し方、内外装について、必要な厨房機器や設備と選び方、
-            </SkewScrollTriggerAnimation>
-
-            <SkewScrollTriggerAnimation>
-                <div>
+                    飲食店開業をお考えの方が、まず行うべきことである事業計画などの事前準備から、<br />
+                    資金調達の方法、物件の探し方、内外装について、必要な厨房機器や設備と選び方、
                     国内・国外で <HighlightMarker> 220店舗</HighlightMarker>以上のコンサルティング経験を活かして、<br />
                     皆様の不安・疑問が解消されますよう、詳しくご説明・ご案内いたします。
-                </div>
-            </SkewScrollTriggerAnimation>
+                </FadeAndSlideScrollTriggerAnimation>
 
-
-            <div className="mt-4 p-3 ml-auto">
+            </div>
+            <div className="flex-1" />
+            <div className="ml-auto">
                 <LinkButton href="/services/produce" title="VIEW More" subTitle="もっとみる" />
             </div>
         </article>
     )
 }
+const Service2 = () => {
+
+    return (
+        <article className="flex flex-col gap-3 bg-color9 p-3 md:p-8 max-w-md rounded-lg">
+            <TransitionImage src={Gastro4} alt="img" className="rounded-md h-60" />
+
+            <div className="">
+                <FadeAndSlideScrollTriggerAnimation className="my-3" tag="h3" innerClassName="text-title2 text-font2" >
+                    ガストロノミーツーリズム
+                </FadeAndSlideScrollTriggerAnimation>
+                <FadeAndSlideScrollTriggerAnimation >
+                    <h4 className="text-title4 text-color3"> 地方から世界へ！↔世界から地方へ！</h4>
+                </FadeAndSlideScrollTriggerAnimation>
+                <FadeAndSlideScrollTriggerAnimation className="text-p">
+                    ガストロノミーツーリズム＝その土地の気候や風土が生んだ<br />
+                    食材・習慣・伝統・歴史などによって育まれた食を楽しみ、<br />
+                    文化に触れる体験を目的とした旅行のことです。<br />
+
+                    日本全国・海外で220店舗以上の飲食店をプロデュース・コンサルティングしてきた経験や
+                    ノウハウ・コネクションを活かし、<br />
+                    生産者から飲食店、ホテル、観光、交通などの各分野を横断して、
+                    ガストロノミーツーリズムを行います。
+                </FadeAndSlideScrollTriggerAnimation>
+            </div>
+
+            <div className="flex-1" />
+            <div className="ml-auto">
+                <LinkButton href="/services/gastronomy_tourism" title="VIEW More" subTitle="もっとみる" />
+            </div>
+        </article>
+    )
+}
+
 
 export const TopGastroSection = () => {
     return (

@@ -12,19 +12,21 @@ export const LinkButton = (
         title,
         subTitle,
         className,
-        target
+        target,
+        outerClass
     }: {
         href: string,
         title?: string
         subTitle?: string,
         className?: string,
+        outerClass?: string,
         target?: string
     }
 ) => {
 
     return (
-        <Link href={href} target={target}>
-            <div className={clsx(styles.viewMore, className)}>
+        <Link href={href} target={target} className={clsx("bg-gray-800",outerClass)}>
+            <div className={clsx(styles.viewMore,className)}>
                 {
                     title && <h2
                         className="font-jost font-light"
