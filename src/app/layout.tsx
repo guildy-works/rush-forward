@@ -16,7 +16,7 @@ export default function RootLayout({
             <body>
                 <ScrollContainer className="flex min-h-screen flex-col h-svh relative">
                     <Header />
-                    <main>
+                    <main className="pt-28">
                         {children}
                     </main>
                     <Footer />

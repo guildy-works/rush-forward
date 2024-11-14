@@ -7,7 +7,8 @@ import { ChildPageHead } from "@/components/ChildPageHeadImage";
 import Image from "next/image";
 import { TransitionImage } from "@/components/TransitionImage";
 import AboutSection from "@/pages-components/about/AboutSection";
-
+import { SectionType1 } from "@/components/SectionType1"
+import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation"
 
 import TopImage from "@/assets/top1.jpg";
 import CEOImage from "@/assets/top.jpg";
@@ -22,22 +23,34 @@ const ServicesPage = () => {
         <div className="min-h-screen">
             <AboutSection/>
 
-            <section className="bg-slate-300 py-16 px-4 w-full relative">
-                <FadeAndSlideScrollTriggerAnimation>
-                    <div className="container mx-auto text-center">
-                        <p className="text-title3 mt-8 mb-8">
-                            代表の言葉
+            <SectionType1 className="bg-color8 sm:mt-36 md:mt-48 lg:mt-56 relative" disableLine>
+
+            <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full flex-col <!--md:-mt-64--> md:flex-row" >
+                <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center mt-auto pb-12 ml-0">
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-color2 text-title2">代表挨拶</p>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">これまで、日本全国や海外で220店舗以上の飲食店をプロデュースする中で、さまざまな出会いや学びを通じて、「食」が持つ大きな力に魅了されてきました。</p>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">食を通じて人と人がつながり、地域が活気づく様子を目の当たりにするたびに、「もっと食を通じて新しい体験や感動を生み出したい」「地域を元気にするお手伝いがしたい」という想いが自然と深まっていったのです。</p>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">
+                            今後は、私たちの経験とノウハウを活かし、「ガストロノミーツーリズム」に力を入れていきます。日本の魅力を国内外に広め、多くの人に幸せな瞬間を届けることができるよう、挑戦を続けていくつもりです。
                         </p>
-                        <p className="text-xl text-gray-700 mb-8 leading-relaxed text-center">
-                            <span className="block">テキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキストテキストテキストテキスト</span>
-                            <span className="block">テキストテキストテキストテキスト</span>
+                    </SkewScrollTriggerAnimation>
+                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
+                        <p className="text-title4">
+                            また、私たちはお互いを尊重し、支え合いながら進んでいける環境を大切にしています。社員一人ひとりが前向きに、楽しく働ける職場であることを心がけています。<br />
+                            これからも新しい挑戦を通じて成長し、多くの皆さんと素晴らしい未来を創っていければと思っています。
                         </p>
-                    </div>
-                </FadeAndSlideScrollTriggerAnimation>
-            </section>
+                    </SkewScrollTriggerAnimation>
+                </div>
+            </div>
+
+            </SectionType1>
 
         </div>
     );

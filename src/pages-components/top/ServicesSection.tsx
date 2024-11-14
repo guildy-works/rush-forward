@@ -125,7 +125,7 @@ const Service1 = () => {
             <Image src={Image_Flow} alt="img" className="h-36 w-auto" />
 
             <div className="mt-4 p-3 ml-auto">
-                <LinkButton href="/about" title="VIEW More" subTitle="もっとみる" />
+                <LinkButton href="/produce" title="VIEW More" subTitle="もっとみる" />
             </div>
         </article>
     )
@@ -201,7 +201,7 @@ export const TopGastroSection = () => {
                     </SkewScrollTriggerAnimation>
 
                     <div className="mt-4 p-3 ml-auto">
-                        <LinkButton href="/about" title="VIEW More" subTitle="もっとみる" />
+                        <LinkButton href="/gastronomy_tourism" title="VIEW More" subTitle="もっとみる" />
                     </div>
                 </div>
             </div>
