@@ -1,9 +1,10 @@
 import { useScrollContext } from "./contexts";
 import { Marker } from "./debug";
-import { Transition, TransitionStatus } from 'react-transition-group';
-import React, { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
+import type { TransitionStatus } from "react-transition-group";
+import { Transition } from "react-transition-group";
+import type { CSSProperties, ElementType, ReactNode } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useScrollTrigger } from "./useScrollTrigger";
-import { css } from "@emotion/css";
 
 const randomColor = () => "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 
@@ -22,6 +23,7 @@ interface ScrollTriggerProps {
     scrollEndOffset?: number | string;
     className?: string;
     style?: CSSProperties;
+    tag?: ElementType;
 }
 
 export const ScrollTrigger = (props: ScrollTriggerProps) => {
@@ -34,6 +36,8 @@ export const ScrollTrigger = (props: ScrollTriggerProps) => {
     });
     const [mount, setMount] = useState(false);
     const color = useRef(randomColor());
+
+    const Tag = props.tag ?? "div"
 
     useEffect(() => {
         if (!trigger.isOverlap && props.once) {
@@ -49,7 +53,7 @@ export const ScrollTrigger = (props: ScrollTriggerProps) => {
     }, []);
 
     return (
-        <div
+        <Tag
             style={context.debug ?
                 ({
                     border: `3px solid ${color.current}`,
@@ -59,7 +63,7 @@ export const ScrollTrigger = (props: ScrollTriggerProps) => {
                     ...props.style
                 })}
             className={props.className}
-            ref={raw => {
+            ref={(raw: any) => {
                 if (raw) {
                     setMe(raw);
                 }
@@ -80,6 +84,6 @@ export const ScrollTrigger = (props: ScrollTriggerProps) => {
                     container={context.rawElement}
                 />
             }
-        </div>
+        </Tag>
     );
 };

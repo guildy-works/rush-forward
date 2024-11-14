@@ -1,25 +1,24 @@
 .viewMore {
-    @apply font-jost font-light;
+    @apply font-jost bg-gray-800 rounded-sm text-white;
     position: relative;
     padding: 2.4rem;
-    padding-bottom: 1.4rem;
-    padding-top: 0.6rem;
+    padding-bottom: 1rem;
+    padding-top: 0.3rem;
     font-size: 0.9rem;
     line-height: 1.6;
     text-align: left;
     transition: all 0.2s;
     box-sizing: border-box;
-    color: #212121;
     text-align: center;
-    border: 1px solid #212121;
 
     &:hover {
         .arrow {
-            left: 1rem;
+            left: 0.7rem;
         }
     }
 
     .arrow {
+        @apply fill-white;
         &:hover {
             left: 1rem;
         }
@@ -30,7 +29,7 @@
         height: 5px;
         left: 0;
         right: 0;
-        bottom: 1rem;
+        bottom: 0.5rem;
         margin: auto;
         background-size: 34px 4.6px;
         transition: all 0.3s;

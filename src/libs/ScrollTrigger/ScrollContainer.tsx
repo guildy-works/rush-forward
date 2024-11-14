@@ -1,10 +1,13 @@
-import React, { CSSProperties, useContext, useEffect, useRef, useState } from "react";
-import { ScrollContainerContext, ScrollContext } from "./contexts";
+import type { CSSProperties } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import type { ScrollContainerContext, ScrollState } from "./contexts";
+import { ScrollContext, ScrollStateContext } from "./contexts";
 
 interface ScrollContainerProps {
     children: React.ReactNode;
     style?: CSSProperties;
     className?: string;
+    innerClassName?: string;
     scrollStartPosition?: number;
     scrollEndPosition?: number;
     debug?: boolean;
@@ -15,9 +18,14 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
         getScrollHeight: () => 0,
         scrollTo: y => { },
         scrollToBottom: () => { },
-        scrollDirection: "down",
         debug: false,
     });
+    const [scrollState, setScrollState] = useState<ScrollState>({
+        scrollHeight: 0,
+        scrollTop: 0,
+        scrollDirection: "down",
+    });
+
     const scrollY = useRef<number>(0);
 
     const scrollTo = (y: number) => {
@@ -61,20 +69,18 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
         const container = option.rawElement;
         const update = () => {
             if (scrollY.current < (container?.scrollTop ?? 0)) {
-                if (option.scrollDirection !== "down") {
-                    setOption(option => ({
-                        ...option,
-                        scrollDirection: "down",
-                    }));
-                }
+                setScrollState({
+                    scrollHeight: container?.scrollHeight ?? 0,
+                    scrollTop: container?.scrollTop ?? 0,
+                    scrollDirection: "down",
+                });
             }
             else {
-                if (option.scrollDirection !== "up") {
-                    setOption(option => ({
-                        ...option,
-                        scrollDirection: "up",
-                    }));
-                }
+                setScrollState({
+                    scrollHeight: container?.scrollHeight ?? 0,
+                    scrollTop: container?.scrollTop ?? 0,
+                    scrollDirection: "up",
+                });
             }
             scrollY.current = (container?.scrollTop ?? 0);
         };
@@ -94,9 +100,9 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
         };
 
         handleScroll(); // Re-evaluate trigger when dependencies change
-        container?.addEventListener('scroll', handleScroll);
+        container?.addEventListener("scroll", handleScroll);
         return () => {
-            container?.removeEventListener('scroll', handleScroll);
+            container?.removeEventListener("scroll", handleScroll);
         };
     }, [option]);
 
@@ -115,6 +121,7 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
                     display: "flex",
                     flexDirection: "column",
                 }}
+                className={props.innerClassName}
                 ref={node => {
                     if (node && !option.rawElement) {
                         setOption({
@@ -127,13 +134,11 @@ export const ScrollContainer = (props: ScrollContainerProps) => {
                     }
                 }}
             >
-
                 <ScrollContext.Provider value={option}>
-                    {props.children}
+                    <ScrollStateContext.Provider value={scrollState}>
+                        {props.children}
+                    </ScrollStateContext.Provider>
                 </ScrollContext.Provider>
-
-
-
             </div >
 
             {option.debug && <Debug

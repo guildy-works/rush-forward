@@ -13,7 +13,7 @@
 body {
     color: rgb(var(--foreground-rgb));
     background: white;
-    @apply text-size-p text-font1;
+    @apply text-size-p text-color2;
     font-family: "Noto Sans JP",sans-serif;
 }
 
@@ -50,5 +50,5 @@ p{
 }
 
 ::selection {
-    @apply bg-color6 text-font1;
+    @apply bg-color3 text-font1;
   }

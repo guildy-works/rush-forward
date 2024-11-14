@@ -1,6 +1,6 @@
-import { SkewScrollTriggerAnimation } from "./SkewScrollTriggerAnimation";
 import Image, { StaticImageData } from "next/image";
 import { TransitionImage } from "@/components/TransitionImage";
+import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 
 export const ChildPageHead = ({ src, title, subTitle }: { src: StaticImageData, title: string, subTitle: string }) => (
     <section className="w-full h-[70vh] relative">

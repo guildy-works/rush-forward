@@ -1,8 +1,9 @@
 'use client'
 
 import clsx from "clsx";
-import { useWindowsSize } from "../libs/useWindowSize";
+
 import styles from "./ScrollIndicator.module.scss";
+import { useWindowsSize } from "@/libs/useWindowSize";
 
 export const ScrollIndicator = () => {
     const size = useWindowsSize(500);
@@ -19,3 +20,4 @@ export const ScrollIndicator = () => {
         <div className={styles.bar}></div>
     </div>;
 };
+

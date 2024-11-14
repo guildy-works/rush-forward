@@ -12,7 +12,7 @@ const sitemapItems = [
 
 export const Footer = () => {
     return (
-        <footer className="bg-color6 min-h-svh sm:min-h-96  pt-16 pb-8">
+        <footer className="bg-color7 min-h-svh sm:min-h-96  pt-16 pb-8">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-between">
                     {/* ロゴと会社情報 */}

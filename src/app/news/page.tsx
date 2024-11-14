@@ -1,22 +1,22 @@
 'use client'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { FadeAndSlideScrollTriggerAnimation } from "@/components/FadeAndSlideScriollTriggerAnimation";
-import { SectionBar } from "@/components/SectionBar";
-import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation";
-import { newsItems } from "@/pages-components/events/eventsMock";
-import { NewsSection } from '@/pages-components/top/NewsSection';
+import { NewsItem, } from '@/pages-components/top/NewsSection';
+import { SectionType1 } from '@/components/SectionType1';
+import { Section1Title } from '@/components/Section1Title';
+import { LinkButton } from '@/components/LinkButton';
+import { fetchNewses,type News } from '@/models/client';
+import { FadeAndSlideScrollTriggerAnimation } from '@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation';
 
 export default function EventsPage() {
     const [currentPage, setCurrentPage] = useState(1);
     const eventsPerPage = 6;
-    const totalPages = Math.ceil(newsItems.length / eventsPerPage);
+    const [totalPages,setTotalPages] = useState(0);
 
     const indexOfLastEvent = currentPage * eventsPerPage;
     const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
-    const currentEvents = newsItems.slice(indexOfFirstEvent, indexOfLastEvent);
 
     return (
         <div className="w-full flex flex-col justify-center bg-color7 p-3 sm:p-6 md:p-8">
@@ -34,6 +34,41 @@ export default function EventsPage() {
         </div>
     );
 }
+
+const NewsSection = () => {
+    const [newsItems, setNewsItems] = useState<News[]>([]);
+
+    useEffect( () => {
+        fetchNewses().then((response) => {
+            setNewsItems(response);
+        });
+    }, []);
+
+    return (
+        <SectionType1 className="bg-color8">
+            <div className="justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full">
+                <Section1Title title="News" subTitle="　　" innerClassName="!bg-color8" />
+
+                <div className="mx-auto w-full">
+                    <FadeAndSlideScrollTriggerAnimation>
+                        <h3 className="text-title4 mt-4 sm:mt-8">新着情報・お知らせ</h3>
+                    </FadeAndSlideScrollTriggerAnimation>
+
+                    <section className="w-full grid grid-cols-1 md:grid-cols-2 mt-4 gap-4 sm:gap-6 md:gap-8">
+                        {newsItems.map((item, index) => (
+                            <FadeAndSlideScrollTriggerAnimation key={index} innerClassName="size-full">
+                                <NewsItem news={item} />
+                            </FadeAndSlideScrollTriggerAnimation>
+                        ))}
+                    </section>
+
+
+                </div>
+            </div>
+        </SectionType1>
+    )
+}
+
 
 const Pagination = ({ currentPage, totalPages, onPageChange }: {
     currentPage: number;
@@ -67,29 +102,5 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: {
                 次へ
             </button>
         </div>
-    );
-};
-const EventCard: React.FC<{ event: any }> = ({ event }) => {
-    const date = new Date(event.date);
-    const formattedDate = date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
-
-    return (
-        <FadeAndSlideScrollTriggerAnimation
-            className=" cursor-pointer"
-            innerClassName="flex flex-col h-full drop-shadow-md rounded-lg overflow-hidden transition-all bg-white hover:drop-shadow-2xl"
-        >
-
-            <img src={event.eyeCatch} alt={event.title} className="w-full h-48 object-cover" />
-            <div className="p-4 flex-grow">
-                <p className="text-sm text-gray2 mb-2">{formattedDate}</p>
-                <h2 className="text-xl font-bold mb-2">{event.title}</h2>
-                <p className="text-grey1 text-base">{event.summary}</p>
-            </div>
-
-            <div className="px-4 py-2 text-right mt-auto">
-                <Link href={"/events/" + event.id} className="text-font2"　>詳細を見る</Link>
-            </div>
-
-        </FadeAndSlideScrollTriggerAnimation>
     );
 };

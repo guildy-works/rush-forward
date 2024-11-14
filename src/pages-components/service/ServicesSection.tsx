@@ -1,6 +1,4 @@
-import { FadeAndSlideScrollTriggerAnimation } from "@/components/FadeAndSlideScriollTriggerAnimation"
 import { LinkButton } from "@/components/LinkButton"
-import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation"
 import { TransitionImage } from "@/components/TransitionImage"
 
 import Image1_GarariSendagaya from "@/assets/img1.jpg"
@@ -32,6 +30,8 @@ import Traveller2 from "@/assets/images/traveller2.svg"
 
 import Image from "next/image"
 import { HighlightMarker } from "@/components/HighlightMarker"
+import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
+import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation"
 
 export const ServicesSection = () => {
 
@@ -58,25 +58,25 @@ export const ServicesSection = () => {
                     <div className="flex-1 w-full relative gap-24 flex flex-wrap justify-center items-center pl-0 sm:pr-8">
                         <div className="w-full flex flex-wrap gap-4 sm:gap-6 lg:gap-12">
                             <FadeAndSlideScrollTriggerAnimation className="max-w-36 lg:max-w-48 w-full mt-12" >
-                                <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro2} alt="img" />
+                                <TransitionImage className="rounded-md" parallaxSlideLength={25} src={Gastro2} alt="img" />
                             </FadeAndSlideScrollTriggerAnimation>
                             <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-36 w-full  md:ml-0 md:mt-32"  >
-                                <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro12} alt="img" />
+                                <TransitionImage className="rounded-md" parallaxSlideLength={60} src={Gastro12} alt="img" />
                             </FadeAndSlideScrollTriggerAnimation>
                             <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 w-full mt-3"  >
-                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro7} alt="img" />
+                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro7} alt="img" />
                             </FadeAndSlideScrollTriggerAnimation>
                             <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-16 w-full"  >
-                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro11} alt="img" />
+                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro11} alt="img" />
                             </FadeAndSlideScrollTriggerAnimation>
                             <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-24 w-full"  >
-                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro8} alt="img" />
+                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro8} alt="img" />
                             </FadeAndSlideScrollTriggerAnimation>
                             <FadeAndSlideScrollTriggerAnimation className="max-w-32 lg:max-w-44 mt-12 w-full"  >
-                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro10} alt="img" />
+                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro10} alt="img" />
                             </FadeAndSlideScrollTriggerAnimation>
                             <FadeAndSlideScrollTriggerAnimation className="max-w-44 lg:max-w-56 mt-12 w-full"  >
-                                <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro1} alt="img" />
+                                <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro1} alt="img" />
                             </FadeAndSlideScrollTriggerAnimation>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ const Service1 = () => {
 
     return (
         <article className="flex flex-col items-start w-full gap-3">
-            <TransitionImage src={MapImage} alt="img" className="rounded-xl w-full" />
+            <TransitionImage src={MapImage} alt="img" className="rounded-md w-full" />
 
             <SkewScrollTriggerAnimation className="my-3">
                 <h2 className="text-title2">開業・運営支援</h2>
@@ -156,7 +156,7 @@ const Service2 = () => {
             <div className="flex justify-center gap-3 sm:gap-5 md:gap-16 w-full flex-col md:-mt-64 md:flex-row items-center" >
                 <div className="gap-8 sm:gap-8 md:gap-12 flex flex-col justify-center mt-auto pb-12">
                     <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <h3 className="text-title1 text-font1">ガストロノミーツーリズム</h3>
+                        <h3 className="text-title2 text-font1">ガストロノミーツーリズム</h3>
                     </SkewScrollTriggerAnimation>
 
                     <SkewScrollTriggerAnimation innerClassName="!bg-color8">
@@ -164,7 +164,7 @@ const Service2 = () => {
                     </SkewScrollTriggerAnimation>
 
                     <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-size-p-wide">
+                        <p className="text-size-p">
                             観光立国として日本を持続的に活性化するため、<br />
                             世界中からフーディーズを集めます！
                         </p>
@@ -179,24 +179,24 @@ const Service2 = () => {
             {/* Center */}
             <div className="flex flex-col flex-grow justify-center items-center gap-3 sm:gap-5 md:gap-16 mt-12 md:24">
                 <div className="flex flex-col items-start gap-2 sm:gap-3 md:gap-5">
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-size-p-wide">
+                    <SkewScrollTriggerAnimation skewPanelClass="!bg-color8">
+                        <p className="text-size">
                             ガストロノミーツーリズム＝その土地の気候や風土が生んだ<br />
                             食材・習慣・伝統・歴史などによって育まれた食を楽しみ、<br />
                             文化に触れる体験を目的とした旅行のことです。
                         </p>
                     </SkewScrollTriggerAnimation>
 
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-size-p-wide">
+                    <SkewScrollTriggerAnimation skewPanelClass="!bg-color8">
+                        <p className="text-size">
                             欧米を中心に普及したスタイルで、<br />
                             世界的に注目度の高い日本の食文化を<br />
                             アピールすることでインバウンドを狙います。
                         </p>
                     </SkewScrollTriggerAnimation>
 
-                    <SkewScrollTriggerAnimation innerClassName="!bg-color8">
-                        <p className="text-size-p-wide">
+                    <SkewScrollTriggerAnimation skewPanelClass="!bg-color8">
+                        <p className="text-size">
                             日本全国・海外で220店舗以上の飲食店をプロデュース・コンサルティングしてきた経験や<br />
                             ノウハウ・コネクションを活かし、<br />
                             生産者から飲食店、ホテル、観光、交通などの各分野を横断して、<br />
@@ -213,13 +213,13 @@ const Service2 = () => {
             {/* Right */}
             <div className="w-full flex flex-wrap gap-8 sm:gap-20 p-3 sm:p-5 md:p-8 justify-between">
                 <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full mt-12" >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={25} src={Gastro4} alt="img" />
+                    <TransitionImage className="rounded-md" parallaxSlideLength={25} src={Gastro4} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
                 <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full ml-auto md:ml-0 md:mt-32"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={60} src={Gastro5} alt="img" />
+                    <TransitionImage className="rounded-md" parallaxSlideLength={60} src={Gastro5} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
                 <FadeAndSlideScrollTriggerAnimation className="max-w-60 w-full"  >
-                    <TransitionImage className="rounded-xl" parallaxSlideLength={80} src={Gastro6} alt="img" />
+                    <TransitionImage className="rounded-md" parallaxSlideLength={80} src={Gastro6} alt="img" />
                 </FadeAndSlideScrollTriggerAnimation>
 
             </div>

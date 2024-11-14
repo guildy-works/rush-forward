@@ -1,32 +1,29 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-import { SkewAnimation } from "@/components/Animations/SkewAnimation";
-import { TransitionImage } from "@/components/TransitionImage";
-import { FadeAndSlideScrollTriggerAnimation } from "@/components/FadeAndSlideScriollTriggerAnimation";
-import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation";
-import { FadeAndSlideAnimation } from "@/components/Animations/FadeAndSlideAnimation";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import TopImage from "@/assets/top.jpg";
-import Top2Image from "@/assets/top1.jpg";
-import Top3Image from "@/assets/top2.jpg";
 
-import Sub1Img from "@/assets/img1.jpg";
-import Sub2Img from "@/assets/img2.jpg";
-import Sub3Img from "@/assets/img3.png";
-import Sub4Img from "@/assets/img4.png";
-import Sub5Img from "@/assets/img8.jpg";
-import Sub6Img from "@/assets/img7.png";
+import Top2Image from "@/assets/top1.jpg";
+
+import LogoImg from "@/assets/logo-dtl.png";
+import gsap, { Power1, Power0 } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { FadeAndSlideAnimation } from "@/libs/Animations/FadeAndSlideAnimation";
+import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
+import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
 
 export const TopSection = () => {
     return (
-        <div className="w-full mx-auto">
+        <>
             <div className="w-full flex flex-wrap">
                 <div className="flex-1 ">
 
 
                     <div className="w-full flex justify-center">
-                        <div className=" inset-0 m-auto text-center -mt-4">
+
+                        <div className=" inset-0 m-auto text-center">
+                            <Image src={LogoImg} alt="Rush Forward" className="w-32 h-24 mx-auto" />
+
                             <FadeAndSlideAnimation in className="flex flex-row-reverse items-start justify-center gap-3" transform={{ rotate: "0" }}>
                                 <h3 className="text-size2 mt-5 sm:mt-12 text-font2 [writing-mode:vertical-rl]">
                                     国内・国外で220店舗以上の
@@ -40,7 +37,7 @@ export const TopSection = () => {
                             </FadeAndSlideAnimation>
 
                             <SkewScrollTriggerAnimation className="mt-8 sm:mt-16">
-                                <h1 className="text-title1 mt-5 font-jost font-light">
+                                <h1 className="text-title1 mt-5 font-jost font-light text-color3">
                                     Rush Forward
                                 </h1>
                             </SkewScrollTriggerAnimation>
@@ -53,64 +50,67 @@ export const TopSection = () => {
 
                 <Slides />
             </div>
-
-            <FadeAndSlideScrollTriggerAnimation transform={{ translate: { x: "90vw" } }}
-                className="bg-color7 w-full p-6 sm:p-12 md:p-24 relative mt-12 sm:mt-24 md:mt-48">
-                <div className="container max-w-screen-md mx-auto px-4 py-8 gap-8 sm:gap-16 md:gap-24 flex flex-wrap justify-center">
-                    {/* 1番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation className="w-64 h-full">
-                        <TransitionImage src={Sub1Img} parallaxSlideLength={70} alt="がらり" className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-
-                    {/* 2番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation className="w-64 h-full">
-                        <TransitionImage src={Sub2Img} alt="料理" className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-
-                    {/* 3番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation className="w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub3Img} alt="厨房" parallaxSlideLength={120} className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-
-                    {/* 4番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation className="w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub4Img} parallaxSlideLength={80} alt="レストラン" className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-
-                    {/* 5番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation className=" w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub5Img} parallaxSlideLength={100} alt="ワイン" className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-
-                    {/* 6番目の画像 */}
-                    <FadeAndSlideScrollTriggerAnimation className=" w-64 col-span-2 h-full">
-                        <TransitionImage src={Sub6Img} alt="料理" parallaxSlideLength={120} className="h-full object-cover rounded" />
-                    </FadeAndSlideScrollTriggerAnimation>
-                </div>
-            </FadeAndSlideScrollTriggerAnimation>
-        </div>
-
+        </>
     )
 }
 
-const Slides = () => <FadeAndSlideAnimation in transform={{ rotate: "0", scale: 1.05 }}
-    className="w-full md:w-8/12 lg:max-w-5xl h-auto">
-    <Splide
-        className="w-full h-auto"
-        options={{
-            rewind: true,
-            type: "loop",
-            autoplay: true,
+const Slides = () => {
+    return <div
+        className="w-full md:w-8/12 lg:max-w-5xl h-auto">
+        <Splide
+            className="w-full h-auto"
+            options={{
+                rewind: true,
+                type: "loop",
+                autoplay: true,
+            }}
+        >
+            <SplideSlide>
+                <KenBurns src={Top2Image} alt="top1" />
+            </SplideSlide>
+            <SplideSlide>
+                <KenBurns src={Top2Image} alt="top1" />
+            </SplideSlide>
+        </Splide>
+    </div>
+}
 
+const KenBurns = ({ src, alt }: { src: StaticImageData, alt: string }) => {
+    var transitionSpeed = 4;
+    var slideDuration = 8;
 
-        }}
-    >
-        <SplideSlide>
-            <Image src={TopImage} alt="top1" className="w-full" style={{}} />
+    useGSAP(
+        () => {
+            gsap.timeline()
+                .to(".im", {
+                    repeat: -1,
+                    opacity: 1,
+                    duration: transitionSpeed,
+                    ease: Power0.easeNone
+                })
+                .to(".im", { // Randomize the Ken Burns effect for different animation for each img
+                    duration: slideDuration,
+                    repeat: -1,
+                    xPercent: randomIntFromInterval(-10, 10),
+                    yPercent: randomIntFromInterval(-10, 10),
+                    scale: randomFloatFromInterval(1, 1.2),
+                    ease: Power1.easeOut
+                }, 0);
+        },
+        {
+            scope: ".ken",
+            dependencies: []
+        }
+    );
 
-        </SplideSlide>
-        <SplideSlide>
-            <Image src={Top2Image} alt="top2" className="w-full" style={{}} />
-        </SplideSlide>
-    </Splide>
-</FadeAndSlideAnimation>
+    return <div className="ken">
+        <Image src={src} alt={alt} className="im w-full" style={{}} />
+    </div>
+}
+
+function randomIntFromInterval(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+function randomFloatFromInterval(min: number, max: number) {
+    return (Math.random() * (max - min) + min).toFixed(2);
+} 

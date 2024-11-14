@@ -1,11 +1,11 @@
+import { FadeAndSlideAnimation } from "@/libs/Animations/FadeAndSlideAnimation";
 import { ScrollTrigger } from "@/libs/ScrollTrigger";
-import { FadeAndSlideAnimation } from "./Animations/FadeAndSlideAnimation";
 
 export const HighlightMarker = ({ children, }: {
     children: React.ReactNode,
 }) => {
     return (
-        <ScrollTrigger className={`relative inline-block overflow-hidden mx-1 -mb-1`}>{
+        <ScrollTrigger className={`relative inline-block overflow-hidden mx-1 -mb-1`} once>{
             state => <div>
                 <span className={`relative z-10 font-bold`}>{children}</span>
                 <FadeAndSlideAnimation transform={{ translate: { x: "-200px" } }} in={state == 'entered'}

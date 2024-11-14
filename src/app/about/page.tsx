@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { FadeAndSlideScrollTriggerAnimation } from '@/components/FadeAndSlideScriollTriggerAnimation';
+
 import { SectionBar } from '@/components/SectionBar';
 import { ChildPageHead } from "@/components/ChildPageHeadImage";
 import Image from "next/image";
@@ -15,6 +15,7 @@ import CEOImage from "@/assets/top.jpg";
 import Sub4Img from "@/assets/img4.png";
 import Sub5Img from "@/assets/img8.jpg";
 import Sub6Img from "@/assets/img7.png";
+import { FadeAndSlideScrollTriggerAnimation } from '@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation';
 
 const ServicesPage = () => {
     return (

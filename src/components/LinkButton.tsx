@@ -37,14 +37,20 @@ export const LinkButton = (
                     </h2>
                 }
                 <h2
-                    className="font-jost font-light"
+                    className="font-jost text-size3"
                     style={{
                         userSelect: "none"
                     }}>
                     {subTitle}
                 </h2>
 
-                <Image alt="Arrow" className={styles.arrow} src={Arrow} />
+
+                <svg className={styles.arrow} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.5 3.9">
+                    <title>arrow01_pc</title>
+                        <g id="レイヤー_1-2" data-name="レイヤー 1">
+                            <polygon points="32.5 3.9 0 3.9 0 2.9 29.5 2.9 26.7 0.8 27.3 0 32.5 3.9" />
+                        </g>
+                </svg>
             </div>
         </Link>
     );
