@@ -14,7 +14,7 @@ import { SectionType1 } from "@/components/SectionType1";
 export const AmazonBookSection = () => {
     return (
 
-        <SectionType1 className="bg-color7 mt-16 md:mt-23">
+        <SectionType1 className="bg-color7 mt-16 md:mt-24">
             <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-4 sm:gap-16 md:gap-28">
                 <FadeAndSlideScrollTriggerAnimation>
                     <Book>
@@ -24,29 +24,29 @@ export const AmazonBookSection = () => {
 
                 <div className="mt-12  md:items-start flex flex-col items-center">
                     <div className="flex flex-col gap-2 md:gap-3 items-start">
-                        <SkewScrollTriggerAnimation innerClassName="text-title3" tag="h2" >
+                        <SkewScrollTriggerAnimation innerClassName="text-title3" tag="h2" skewPanelClass="!bg-color7">
                             当社代表 重野和稔の著書
                         </SkewScrollTriggerAnimation>
-                        <SkewScrollTriggerAnimation innerClassName="text-title3 mt-3" tag="h2" >
+                        <SkewScrollTriggerAnimation innerClassName="text-title3 mt-3" tag="h2" skewPanelClass="!bg-color7">
                             「飲食店 成功する店 失敗する店」
                         </SkewScrollTriggerAnimation>
 
-                        <SkewScrollTriggerAnimation className="mt-4 sm:mt-8 md:mt-12" tag="h3" >
+                        <SkewScrollTriggerAnimation className="mt-4 sm:mt-8 md:mt-12" tag="h3" skewPanelClass="!bg-color7">
                             独立して以来、国内外200店舗以上の飲食店プロデュース、
                         </SkewScrollTriggerAnimation>
-                        <SkewScrollTriggerAnimation tag="h3">
+                        <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-color7">
                             運営管理などをまかされ、
                         </SkewScrollTriggerAnimation>
-                        <SkewScrollTriggerAnimation tag="h3">
+                        <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-color7">
                             死屍累々の飲食業界で8割以上の高確率で繁盛店を作り続けてきた著者が、
                         </SkewScrollTriggerAnimation>
-                        <SkewScrollTriggerAnimation tag="h3">
+                        <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-color7">
                             その経験から学んだ飲食店サバイバル&繁盛店づくりの極意を教えます!
                         </SkewScrollTriggerAnimation>
-                        <SkewScrollTriggerAnimation tag="h3">
+                        <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-color7">
                             飲食業に興味をもっている人や、
                         </SkewScrollTriggerAnimation>
-                        <SkewScrollTriggerAnimation tag="h3">
+                        <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-color7">
                             飲食店を経営している人には必読の1冊です。
                         </SkewScrollTriggerAnimation>
                     </div>

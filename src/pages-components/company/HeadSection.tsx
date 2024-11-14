@@ -1,10 +1,5 @@
 import { HighlightMarker } from "@/components/HighlightMarker";
 import { LinkButton } from "@/components/LinkButton";
-import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation";
-import { TransitionImage } from "@/components/TransitionImage";
-import Link from "next/link";
-
-import { FadeAndSlideScrollTriggerAnimation } from "@/components/FadeAndSlideScriollTriggerAnimation";
 import { TransitionImage2 } from "@/components/TransitionImage2";
 
 import SmallImage1 from "@/assets/small_img1.png";
@@ -18,6 +13,7 @@ import Gastro from "@/assets/images/gastro/gstro.webp"
 import Sub4Img from "@/assets/img4.png";
 import Sub5Img from "@/assets/img8.jpg";
 import Sub6Img from "@/assets/img7.png";
+import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
 
 
 export default function HeadSection() {

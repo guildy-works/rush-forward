@@ -1,10 +1,7 @@
 import { HighlightMarker } from "@/components/HighlightMarker";
 import { LinkButton } from "@/components/LinkButton";
-import { SkewScrollTriggerAnimation } from "@/components/SkewScrollTriggerAnimation";
 import { TransitionImage } from "@/components/TransitionImage";
 import Link from "next/link";
-
-import { FadeAndSlideScrollTriggerAnimation } from "@/components/FadeAndSlideScriollTriggerAnimation";
 import { TransitionImage2 } from "@/components/TransitionImage2";
 
 import SmallImage1 from "@/assets/small_img1.png";
@@ -13,11 +10,13 @@ import SmallImage3 from "@/assets/small_img3.png";
 import SmallImage4 from "@/assets/small_img4.png";
 import { SectionType1 } from "@/components/SectionType1";
 import { SectionTitleChild } from "@/components/SectionTitleChild";
+import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
+import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
 
 export default function HeadSection() {
 
     return (
-        <SectionType1>
+        <SectionType1 innerClassName="!flex-row">
             <div className=" justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full md:w-2/5">
                 <SectionTitleChild title="Produce / Consulting" subTitle="事業・運営支援" />
 

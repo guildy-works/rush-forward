@@ -20,12 +20,12 @@ type MenuItem = {
 export const menuItems: MenuItem[] = [
     { href: "/", label: "TOP" },
     { href: "/about", label: "About" },
-    { href: "/services", label: "Service",childlen:[
-        { href: "/service/producing", label: "Producing" },
-        { href: "/service/gastronomy-tourism", label: "Gastronomy Tourism" },
-        { href: "/service/hotel", label: "Hotel" },
-        { href: "/service/restaurant", label: "Restaurant" },
-    ] },
+    {
+        href: "/services", label: "Service", childlen: [
+            { href: "/services/produce", label: "開業・運営支援" },
+            { href: "/services/gastronomy-tourism", label: "ガストロノミーツーリズム" },
+        ]
+    },
     { href: "/news", label: "News" },
     { href: "/company", label: "Company" },
     { href: "/contacts", label: "Contact" },
@@ -37,50 +37,12 @@ export const Header = () => {
 
     return (
         <>
-            <header className="flex items-center sticky top-0 mt-0 md:mt-48 bg-white/60 backdrop-blur-lg z-20">
+            <header className='sticky top-0  mt-0 md:mt-48 bg-white/60  backdrop-blur-lg z-10 flex items-center px-3'>
                 {
                     <Link href="/" className={clsx('transition-opacity duration-200', state.scrollTop > 300 ? "opacity-100" : "opacity-0")}>
                         <Image className="ml-8" src={LogoImg} alt="Rush Forward" width={80} height={80} />
                     </Link>
                 }
-
-
-                {/* Desktop */}
-                <nav className="hidden w-full md:flex gap-6 justify-end py-6 px-20">
-
-                    <div className='ml-auto' />
-                    {menuItems.map((item, index) => {
-                        return (
-                            <div className="relative group" key={index} >
-                                <Link
-                                    href={item.href}
-                                    className="text-navigation py-2 group-hover:text-color3 group-hover:border-b-2 border-color3 transition duration-300"
-                                >
-                                    {item.label}
-                                </Link>
-
-                                {/* {item.child?.length && (
-                                    <div className="absolute z-10 hidden top-6 group-hover:block group-hover:border-t-2 border-color3 w-max transition duration-300">
-                                        <div className="p-4 bg-white rounded-sm w-full flex flex-col">
-                                            {
-                                                item.child?.map((child, index) => (
-                                                    <Link
-                                                        key={index}
-                                                        href={child.href}
-                                                        className="text-navigation hover:text-color3 transition duration-300"
-                                                    >
-                                                        {child.label}
-                                                    </Link>
-                                                ))
-                                            }
-
-                                        </div>
-                                    </div>
-                                )} */}
-                            </div>
-                        )
-                    })}
-                </nav>
 
                 {/* Mobile */}
                 <nav className="flex md:hidden w-full gap-6 justify-end py-2">
@@ -91,6 +53,47 @@ export const Header = () => {
                     </button>
 
                     <Drawer isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+                </nav>
+
+                <nav className={`w-full hidden md:flex gap-6 justify-end ml-auto py-6 px-20`}>
+                    <div className='ml-auto' />
+                    {menuItems.map((item, index) => {
+                        return (
+                            <div className="relative group" key={index}>
+                                <Link
+                                    href={item.href}
+                                    className="text-navigation py-2 inline-block relative font-jost"
+                                >
+                                    {item.label}
+                                </Link>
+
+                                {item.childlen?.length && (
+                                    <div className="absolute w-[308px] z-10 transform opacity-0 scale-95 
+                         transition-all duration-200 ease-out pointer-events-none
+                         group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto 
+                         top-6">
+                                        <div className="p-8 bg-white w-full flex flex-col shadow-2xl rounded-xl space-y-2
+                         transition-transform duration-200 ease-out
+                         translate-y-2 group-hover:translate-y-0">
+                                            {item.childlen?.map((child, index) => (
+                                                <Link
+
+                                                    key={index}
+                                                    href={child.href}
+                                                    className="text-navigation hover:text-color1 transition duration-300 flex items-center justify-between"
+                                                >
+                                                    <span>{child.label}</span>
+                                                    {child.label2 && (
+                                                        <small className="text-gray-500 ml-2">{child.label2}</small>
+                                                    )}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        )
+                    })}
                 </nav>
             </header>
         </>
@@ -117,30 +120,36 @@ const Drawer = ({ isOpen, setIsOpen, children }: React.PropsWithChildren<Props>)
 
                     <nav className="flex flex-col gap-6 h-full justify-center items-start">
                         {menuItems.map((item, index) => (
-                            <FadeAndSlideAnimation in key={item.href} delay={index * 50}>
+                            <FadeAndSlideAnimation className="relative group" key={index}>
                                 <Link
-                                    onClick={() => setIsOpen(false)}
-                                    key={index}
                                     href={item.href}
-                                    className="text-navigation hover:text-color3 transition duration-300"
+                                    className="text-navigation py-2 inline-block relative "
                                 >
                                     {item.label}
                                 </Link>
-                                {/* {
-                                    item.child?.length && (
-                                        item.child?.map(
-                                            (child, index) => (
+                                {item.childlen?.length && (
+                                    <div className="absolute w-[308px] z-10 transform opacity-0 scale-95 
+                                         transition-all duration-200 ease-out pointer-events-none
+                                         group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto 
+                                         top-6">
+                                        <div className="p-8 bg-white w-full flex flex-col shadow-2xl rounded-xl space-y-2
+                                         transition-transform duration-200 ease-out
+                                         translate-y-2 group-hover:translate-y-0">
+                                            {item.childlen?.map((child, index) => (
                                                 <Link
-                                                    key={child.href}
+                                                    key={index}
                                                     href={child.href}
-                                                    className="ml-4 text-navigation hover:text-color3 transition duration-300"
+                                                    className="text-navigation hover:text-color1 transition duration-300 flex items-center justify-between"
                                                 >
-                                                    {child.label}
+                                                    <span>{child.label}</span>
+                                                    {child.label2 && (
+                                                        <small className="text-gray-500 ml-2">{child.label2}</small>
+                                                    )}
                                                 </Link>
-                                            )
-                                        )
-                                    )
-                                } */}
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </FadeAndSlideAnimation>
                         ))}
                     </nav>

@@ -17,7 +17,7 @@ import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimatio
 export default function AboutSection() {
 
     return (
-        <SectionType1>
+        <SectionType1 innerClassName="!flex-row">
             <div className=" justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full md:w-2/5">
                 <Section1Title title="About" subTitle="理念" />
 

@@ -75,7 +75,7 @@ export const NewsItem = (props: {
 
     return (
         <div className="size-full">
-            <div className="size-full flex p-2 md:p-4 pl-0 shadow-lg bg-white rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl transition:shadow duration-300 ease-in-out">
+            <div className="size-full flex p-2 md:p-4 !pl-0 shadow-lg bg-white rounded-3xl overflow-hidden cursor-pointer hover:shadow-2xl transition:shadow duration-300 ease-in-out">
                 <div className="p-2 md:p-4 w-24 bg-color9 flex flex-col items-center justify-center gap-1 rounded-r-xl">
                     <div className="text-size-p text-color3">{date.getFullYear()}</div>
                     <div className="text-title3 text-color3">{date.getMonth() + 1}.{date.getDate()}</div>
