@@ -17,8 +17,6 @@ export const TopSection = () => {
         <>
             <div className="w-full flex flex-wrap">
                 <div className="flex-1 ">
-
-
                     <div className="w-full flex justify-center">
 
                         <div className=" inset-0 m-auto text-center">
@@ -79,29 +77,29 @@ const KenBurns = ({ src, alt }: { src: StaticImageData, alt: string }) => {
     var transitionSpeed = 4;
     var slideDuration = 8;
 
-    useGSAP(
-        () => {
-            gsap.timeline()
-                .to(".im", {
-                    repeat: -1,
-                    opacity: 1,
-                    duration: transitionSpeed,
-                    ease: Power0.easeNone
-                })
-                .to(".im", { // Randomize the Ken Burns effect for different animation for each img
-                    duration: slideDuration,
-                    repeat: -1,
-                    xPercent: randomIntFromInterval(-10, 10),
-                    yPercent: randomIntFromInterval(-10, 10),
-                    scale: randomFloatFromInterval(1, 1.2),
-                    ease: Power1.easeOut
-                }, 0);
-        },
-        {
-            scope: ".ken",
-            dependencies: []
-        }
-    );
+    // useGSAP(
+    //     () => {
+    //         gsap.timeline()
+    //             .to(".im", {
+    //                 repeat: -1,
+    //                 opacity: 1,
+    //                 duration: transitionSpeed,
+    //                 ease: Power0.easeNone
+    //             })
+    //             .to(".im", { // Randomize the Ken Burns effect for different animation for each img
+    //                 duration: slideDuration,
+    //                 repeat: -1,
+    //                 xPercent: randomIntFromInterval(-10, 10),
+    //                 yPercent: randomIntFromInterval(-10, 10),
+    //                 scale: randomFloatFromInterval(1, 1.2),
+    //                 ease: Power1.easeOut
+    //             }, 0);
+    //     },
+    //     {
+    //         scope: ".ken",
+    //         dependencies: []
+    //     }
+    // );
 
     return <div className="ken">
         <Image src={src} alt={alt} className="im w-full" style={{}} />
