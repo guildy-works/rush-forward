@@ -1,0 +1,24 @@
+.book {
+    @apply shadow-slate-400 shadow-xl;
+    position: relative;
+    max-width: 100%;
+    border-radius: 5px;
+
+    img {
+        display: block;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    &::after {
+        box-sizing: inherit;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: linear-gradient(-90deg, #fff0, #ffffff1a 80%, #ffffff4d 95%, #fff6 96.5%, #cbcbcb14 98%, #6a6a6a1a);
+        border-radius: 5px;
+    }
+}
